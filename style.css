@@ -1,0 +1,321 @@
+/* =============================================
+   Monica Marine Nigeria Limited - Stylesheet
+   Edit this file to change colors, fonts,
+   spacing, and layout.
+============================================= */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0A1628;--navy2:#112240;--navy3:#1B3A6B;
+  --blue:#1A56DB;--blue2:#2563EB;--blue3:#3B82F6;--blue4:#93C5FD;
+  --white:#FFFFFF;--off-white:#F8FAFF;--light:#EEF3FF;
+  --gray:#6B7280;--gray2:#9CA3AF;--gray3:#E5E7EB;--gray4:#F3F4F6;
+  --text:#1F2937;--text2:#374151;
+  --gold:#D4A017;--red:#DC2626;--green:#16A34A;
+  --shadow:0 4px 24px rgba(10,22,40,0.1);
+  --shadow2:0 8px 40px rgba(10,22,40,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+
+/* UTILITY */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:88px 0}
+.section-tag{font-size:12px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue2);margin-bottom:10px}
+.section-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(28px,4vw,42px);color:var(--navy);line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px}
+.section-sub{font-size:16px;color:var(--gray);line-height:1.75;font-weight:300;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border:none;transition:all 0.2s}
+.btn-primary{background:var(--blue2);color:var(--white)}
+.btn-primary:hover{background:var(--navy3);transform:translateY(-1px)}
+.btn-white{background:var(--white);color:var(--navy)}
+.btn-white:hover{background:var(--light);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--white)}
+.btn-outline-blue{background:transparent;color:var(--blue2);border:2px solid var(--blue2)}
+.btn-outline-blue:hover{background:var(--blue2);color:var(--white)}
+.badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
+.badge-blue{background:var(--light);color:var(--blue2)}
+.badge-green{background:#DCFCE7;color:var(--green)}
+.badge-red{background:#FEE2E2;color:var(--red)}
+.divider{height:1px;background:var(--gray3)}
+.text-center{text-align:center}
+.text-center .section-sub{margin:0 auto}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;transition:all 0.3s}
+nav.scrolled{background:var(--white);box-shadow:var(--shadow)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 40px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-icon{width:40px;height:40px;background:var(--blue2);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.nav-logo-icon svg{width:24px;height:24px;fill:white}
+.nav-logo-text{display:flex;flex-direction:column}
+.nav-logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:var(--white);line-height:1.1;letter-spacing:0.01em;transition:color 0.3s}
+nav.scrolled .nav-logo-name{color:var(--navy)}
+.nav-logo-tag{font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.65);transition:color 0.3s}
+nav.scrolled .nav-logo-tag{color:var(--gray)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{padding:8px 14px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.85);border-radius:4px;transition:all 0.2s;cursor:pointer;font-family:'Montserrat',sans-serif;letter-spacing:0.02em}
+nav.scrolled .nav-link{color:var(--text2)}
+.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(255,255,255,0.12)}
+nav.scrolled .nav-link:hover,nav.scrolled .nav-link.active{color:var(--blue2);background:var(--light)}
+.nav-cta{padding:9px 22px;background:var(--blue2);color:var(--white);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all 0.2s}
+.nav-cta:hover{background:var(--navy3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;display:block}
+nav.scrolled .hamburger span{background:var(--navy)}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-top:1px solid var(--gray3);box-shadow:var(--shadow2);z-index:299;padding:16px 24px 24px}
+.mobile-menu.open{display:block}
+.mobile-link{display:block;padding:12px 16px;font-size:14px;font-weight:500;color:var(--text2);border-radius:4px;font-family:'Montserrat',sans-serif;transition:all 0.15s;cursor:pointer}
+.mobile-link:hover{background:var(--light);color:var(--blue2)}
+
+/* PAGE SYSTEM */
+.page{display:none}
+.page.active{display:block}
+
+/* ============ HOME PAGE ============ */
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1B3A6B 100%);z-index:0}
+.hero-ocean{position:absolute;bottom:0;left:0;right:0;height:180px;z-index:1;overflow:hidden}
+.hero-ocean svg{width:100%;height:100%}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px;z-index:1}
+.hero-content{position:relative;z-index:2;padding:120px 40px 100px;max-width:1200px;margin:0 auto;width:100%}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.hero-line{width:36px;height:2px;background:var(--blue3)}
+.hero-eyebrow-text{font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue4)}
+.hero h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(36px,5.5vw,68px);color:var(--white);line-height:1.06;letter-spacing:-0.03em;margin-bottom:24px;max-width:720px}
+.hero h1 span{color:var(--blue3)}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:520px;margin-bottom:40px;font-weight:300}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:72px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,auto);gap:0;border-top:1px solid rgba(255,255,255,0.1);padding-top:40px;width:fit-content}
+.hero-stat{padding:0 40px 0 0;margin-right:40px;border-right:1px solid rgba(255,255,255,0.1)}
+.hero-stat:last-child{border-right:none}
+.hero-stat-val{font-family:'Montserrat',sans-serif;font-weight:800;font-size:36px;color:var(--white);line-height:1}
+.hero-stat-label{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.06em;text-transform:uppercase;margin-top:4px}
+
+/* SERVICES STRIP */
+.services-strip{background:var(--blue2);padding:0}
+.strip-inner{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(255,255,255,0.15)}
+.strip-item{padding:28px 28px;border-right:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;gap:14px;transition:background 0.2s;cursor:pointer}
+.strip-item:hover{background:var(--navy3)}
+.strip-icon{width:42px;height:42px;background:rgba(255,255,255,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.strip-text{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--white);line-height:1.3}
+
+/* ABOUT SECTION */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about-img{position:relative}
+.about-img-main{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy2),var(--navy3));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:80px;overflow:hidden;position:relative}
+.about-img-main::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,86,219,0.3),transparent)}
+.about-badge-float{position:absolute;bottom:-20px;right:-20px;background:var(--white);border-radius:8px;padding:16px 20px;box-shadow:var(--shadow2);border:1px solid var(--gray3)}
+.about-badge-val{font-family:'Montserrat',sans-serif;font-weight:800;font-size:28px;color:var(--navy);line-height:1}
+.about-badge-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px}
+.about-checklist{display:flex;flex-direction:column;gap:12px;margin:28px 0 32px}
+.about-check{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--text2);line-height:1.6}
+.check-icon{width:20px;height:20px;background:var(--light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:var(--blue2);font-size:11px;font-weight:700}
+
+/* SERVICES */
+.services-bg{background:var(--off-white)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:52px}
+.service-card{background:var(--white);border:1px solid var(--gray3);border-radius:8px;padding:32px;transition:all 0.25s;cursor:pointer;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue2);transform:scaleX(0);transition:transform 0.25s;transform-origin:left}
+.service-card:hover{box-shadow:var(--shadow2);transform:translateY(-3px);border-color:transparent}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon-wrap{width:56px;height:56px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;transition:background 0.2s}
+.service-card:hover .service-icon-wrap{background:var(--blue2)}
+.service-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:10px}
+.service-desc{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px;font-weight:300}
+.service-link{font-size:13px;font-weight:600;color:var(--blue2);display:flex;align-items:center;gap:6px;font-family:'Montserrat',sans-serif;letter-spacing:0.02em}
+.service-link::after{content:'→';transition:transform 0.2s}
+.service-card:hover .service-link::after{transform:translateX(4px)}
+
+/* WHY US */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px}
+.why-card{text-align:center;padding:32px 24px}
+.why-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:48px;color:var(--gray3);line-height:1;margin-bottom:16px}
+.why-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;color:var(--navy);margin-bottom:10px}
+.why-desc{font-size:14px;color:var(--gray);line-height:1.7;font-weight:300}
+
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);padding:72px 0;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px}
+.cta-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-text h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,36px);color:var(--white);margin-bottom:10px}
+.cta-text p{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300}
+
+/* CLIENTS */
+.clients-row{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:48px}
+.client-logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--gray2);letter-spacing:0.08em;text-transform:uppercase;padding:12px 24px;border:1px solid var(--gray3);border-radius:4px;transition:all 0.2s}
+.client-logo:hover{color:var(--navy);border-color:var(--navy);background:var(--light)}
+
+/* ============ ABOUT PAGE ============ */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);padding:140px 0 80px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px}
+.page-hero-content{position:relative;z-index:1}
+.page-hero h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(32px,5vw,56px);color:var(--white);margin-bottom:16px;letter-spacing:-0.02em}
+.page-hero p{font-size:17px;color:rgba(255,255,255,0.65);font-weight:300;max-width:560px;line-height:1.7}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:20px;letter-spacing:0.04em}
+.breadcrumb span{color:var(--blue4)}
+
+.timeline{position:relative;padding-left:32px;margin-top:48px}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gray3)}
+.timeline-item{position:relative;padding-bottom:40px}
+.timeline-dot{position:absolute;left:-39px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--blue2);border:3px solid var(--white);box-shadow:0 0 0 2px var(--blue2)}
+.timeline-year{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--blue2);letter-spacing:0.1em;margin-bottom:6px}
+.timeline-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;color:var(--navy);margin-bottom:8px}
+.timeline-desc{font-size:14px;color:var(--gray);line-height:1.7;font-weight:300}
+
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;margin-top:48px}
+.team-card{background:var(--white);border:1px solid var(--gray3);border-radius:8px;overflow:hidden;transition:all 0.2s}
+.team-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.team-photo{height:200px;background:linear-gradient(135deg,var(--navy2),var(--navy3));display:flex;align-items:center;justify-content:center;font-size:56px}
+.team-info{padding:20px}
+.team-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--navy);margin-bottom:4px}
+.team-role{font-size:12px;color:var(--blue2);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.team-bio{font-size:13px;color:var(--gray);line-height:1.6;font-weight:300}
+
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.value-card{padding:28px;background:var(--off-white);border-radius:8px;border-left:3px solid var(--blue2)}
+.value-icon{font-size:28px;margin-bottom:12px}
+.value-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--navy);margin-bottom:8px}
+.value-desc{font-size:14px;color:var(--gray);line-height:1.65;font-weight:300}
+
+/* ============ SERVICES PAGE ============ */
+.services-full-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px}
+.service-full-card{background:var(--white);border:1px solid var(--gray3);border-radius:8px;overflow:hidden;transition:all 0.2s}
+.service-full-card:hover{box-shadow:var(--shadow2)}
+.service-full-top{height:180px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden}
+.service-full-body{padding:28px 32px}
+.service-full-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;color:var(--navy);margin-bottom:10px}
+.service-full-desc{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px;font-weight:300}
+.service-includes{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.include-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text2);line-height:1.5}
+.include-dot{width:5px;height:5px;border-radius:50%;background:var(--blue2);flex-shrink:0;margin-top:7px}
+
+/* ============ SHOP PAGE ============ */
+.shop-layout{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start;margin-top:40px}
+.shop-sidebar{background:var(--white);border:1px solid var(--gray3);border-radius:8px;padding:24px;position:sticky;top:92px}
+.sidebar-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--gray3)}
+.sidebar-cats{display:flex;flex-direction:column;gap:4px;margin-bottom:24px}
+.sidebar-cat{padding:9px 12px;font-size:13px;font-weight:500;color:var(--text2);border-radius:4px;cursor:pointer;transition:all 0.15s;font-family:'Montserrat',sans-serif}
+.sidebar-cat:hover,.sidebar-cat.active{background:var(--light);color:var(--blue2)}
+.sidebar-price{margin-bottom:20px}
+.price-range{display:flex;gap:8px;align-items:center}
+.price-input{flex:1;padding:8px 10px;border:1px solid var(--gray3);border-radius:4px;font-size:13px;color:var(--text);outline:none;font-family:'Open Sans',sans-serif}
+.price-input:focus{border-color:var(--blue2)}
+.filter-btn{width:100%;padding:10px;background:var(--blue2);color:var(--white);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:background 0.2s;margin-top:8px}
+.filter-btn:hover{background:var(--navy3)}
+
+.shop-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.shop-count{font-size:14px;color:var(--gray)}
+.shop-sort{padding:9px 14px;border:1px solid var(--gray3);border-radius:4px;font-size:13px;color:var(--text);outline:none;font-family:'Open Sans',sans-serif;background:var(--white)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.product-card{background:var(--white);border:1px solid var(--gray3);border-radius:8px;overflow:hidden;transition:all 0.2s}
+.product-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.product-img{height:180px;background:linear-gradient(135deg,var(--off-white),var(--light));display:flex;align-items:center;justify-content:center;font-size:52px;position:relative}
+.product-badge{position:absolute;top:10px;left:10px}
+.product-body{padding:16px}
+.product-cat{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px}
+.product-name{font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--navy);margin-bottom:6px;line-height:1.3}
+.product-sku{font-size:11px;color:var(--gray2);margin-bottom:10px;font-family:'Open Sans',sans-serif}
+.product-footer{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--gray3)}
+.product-price{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--navy)}
+.add-btn{padding:7px 14px;background:var(--blue2);color:var(--white);font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:background 0.15s}
+.add-btn:hover{background:var(--navy3)}
+
+.cart-bar{position:fixed;bottom:24px;right:24px;background:var(--navy);color:var(--white);border-radius:8px;padding:14px 20px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow2);z-index:200;cursor:pointer;transition:all 0.2s;transform:translateY(100px);opacity:0}
+.cart-bar.visible{transform:translateY(0);opacity:1}
+.cart-bar:hover{background:var(--navy3)}
+.cart-bar-icon{font-size:20px}
+.cart-bar-text{font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px}
+.cart-bar-count{background:var(--blue2);color:var(--white);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'Montserrat',sans-serif}
+
+/* ============ CONTACT PAGE ============ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:52px;align-items:start;margin-top:52px}
+.contact-info-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.contact-info-card{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--off-white);border-radius:8px;border:1px solid var(--gray3)}
+.contact-info-icon{width:44px;height:44px;background:var(--light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.contact-info-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:4px}
+.contact-info-val{font-size:14px;color:var(--navy);font-weight:500;line-height:1.5}
+.map-placeholder{height:240px;background:linear-gradient(135deg,var(--light),var(--off-white));border-radius:8px;border:1px solid var(--gray3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.map-placeholder span{font-size:48px}
+.map-placeholder p{font-size:13px;color:var(--gray);text-align:center}
+
+.contact-form{background:var(--white);border:1px solid var(--gray3);border-radius:8px;padding:36px}
+.form-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:var(--navy);margin-bottom:8px}
+.form-sub{font-size:14px;color:var(--gray);margin-bottom:28px;font-weight:300;line-height:1.6}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-group.full{grid-column:1/-1}
+.form-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray)}
+.form-input,.form-select,.form-textarea{background:var(--off-white);border:1px solid var(--gray3);border-radius:4px;padding:11px 14px;font-family:'Open Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.2s;width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--blue2);background:var(--white)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--gray2)}
+.form-textarea{min-height:120px;resize:vertical}
+.form-select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:var(--off-white)}
+.submit-btn{width:100%;padding:14px;background:var(--blue2);color:var(--white);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;transition:all 0.2s;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px}
+.submit-btn:hover{background:var(--navy3)}
+.form-note{font-size:12px;color:var(--gray2);text-align:center;margin-top:12px;line-height:1.5}
+
+/* FOOTER */
+.footer{background:var(--navy);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px}
+.footer-brand-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:var(--white);margin-bottom:4px}
+.footer-brand-tag{font-size:11px;color:var(--blue4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.footer-about{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;max-width:300px}
+.footer-socials{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;border-radius:6px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all 0.2s}
+.social-btn:hover{background:var(--blue2)}
+.footer-col-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:18px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-link{font-size:13px;color:rgba(255,255,255,0.5);cursor:pointer;transition:color 0.2s;font-weight:300}
+.footer-link:hover{color:var(--white)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:10px;font-weight:300;line-height:1.5}
+.footer-contact-icon{flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom-text{font-size:12px;color:rgba(255,255,255,0.3);letter-spacing:0.04em}
+.footer-cert{display:flex;gap:16px}
+.cert-badge{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.06em}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:var(--white);border-left:3px solid var(--blue2);padding:14px 24px;border-radius:4px;font-size:13px;font-weight:500;z-index:500;transition:transform 0.3s;white-space:nowrap;box-shadow:var(--shadow2)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast.success{border-left-color:var(--green)}
+.toast.error{border-left-color:var(--red)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .services-full-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .shop-layout{grid-template-columns:1fr}
+  .shop-sidebar{position:static}
+}
+@media(max-width:768px){
+  .hero-stats{grid-template-columns:1fr 1fr;gap:24px}
+  .hero-stat{padding-right:0;margin-right:0;border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:16px}
+  .hero-stat:nth-child(odd){border-right:1px solid rgba(255,255,255,0.1);padding-right:24px}
+  .strip-inner{grid-template-columns:1fr 1fr}
+  .services-grid,.why-grid,.values-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .nav-inner{padding:0 20px}
+  .hero-content{padding:100px 20px 80px}
+  .section{padding:64px 0}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-inner{flex-direction:column;text-align:center}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){
+  .strip-inner{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .contact-form{padding:24px}
+}
