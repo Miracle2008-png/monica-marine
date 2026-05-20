@@ -448,24 +448,66 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 /* =======================================
    RESPONSIVE
 ======================================= */
+
+/* ---- iPad Landscape & Small Desktop (1024px) ---- */
 @media(max-width:1024px){
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .services-full-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .shop-layout{grid-template-columns:1fr}
-  .shop-sidebar{position:static}
+  .nav-inner{padding:0 24px}
+  .hero-content{padding:130px 32px 100px}
+  .hero-stats{grid-template-columns:repeat(4,1fr);gap:16px}
+  .stat-val{font-size:32px}
+  .strip-inner{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .services-grid-home{grid-template-columns:1fr 1fr;gap:18px}
+  .services-full-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .values-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .team-card.team-featured{grid-template-columns:280px 1fr}
+  .team-card.team-featured .team-info{padding:28px 32px}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .clients-grid{grid-template-columns:repeat(3,1fr)}
+  .shop-layout{grid-template-columns:240px 1fr;gap:20px}
+  .shop-sidebar{position:sticky;top:96px}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+  .section{padding:80px 0}
 }
+
+/* ---- iPad Portrait & Large Phone (768px) ---- */
 @media(max-width:768px){
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
   .nav-inner{padding:0 20px}
-  .hero-content{padding:120px 20px 100px}
-  .hero-stats{grid-template-columns:1fr 1fr;gap:20px}
-  .hero-stat{padding-right:0;margin-right:0;border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:16px}
-  .hero-stat:nth-child(odd){border-right:1px solid rgba(255,255,255,0.08);padding-right:20px}
+  .hero-content{padding:110px 20px 80px}
+  .hero h1{font-size:clamp(30px,6vw,48px)}
+  .hero-sub{font-size:16px;max-width:100%}
+  .hero-btns{gap:12px}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:0;padding-top:28px}
+  .hero-stat{padding:16px 16px 16px 0;margin:0;border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .hero-stat:nth-child(odd){border-right:1px solid rgba(255,255,255,0.08)}
+  .hero-stat:nth-child(3),.hero-stat:nth-child(4){border-bottom:none}
+  .stat-val{font-size:28px}
   .strip-inner{grid-template-columns:1fr 1fr}
-  .services-grid-home,.values-grid{grid-template-columns:1fr}
+  .strip-item{padding:20px 16px}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .about-badge-float{bottom:-12px;right:-8px;padding:14px 18px}
+  .about-badge-val{font-size:24px}
+  .services-grid-home{grid-template-columns:1fr}
+  .services-full-grid{grid-template-columns:1fr}
+  .svc-top{height:180px}
   .why-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .team-card.team-featured{grid-template-columns:1fr}
+  .team-card.team-featured .team-photo{min-height:260px;max-height:300px}
+  .team-card.team-featured .team-info{padding:24px}
+  .team-card.team-featured .team-name{font-size:20px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .clients-grid{grid-template-columns:repeat(2,1fr)}
+  .shop-layout{grid-template-columns:1fr;gap:20px}
+  .shop-sidebar{position:static;padding:20px}
+  .sidebar-cats{display:grid;grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:28px}
+  .contact-form{padding:28px 20px}
   .form-row{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .cta-inner{flex-direction:column;text-align:center}
