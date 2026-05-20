@@ -449,8 +449,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
    RESPONSIVE
 ======================================= */
 
-/* ---- iPad Landscape & Small Desktop (1024px) ---- */
+/* ---- iPad Landscape & Tablet (1024px) — hamburger starts here ---- */
 @media(max-width:1024px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
   .nav-inner{padding:0 24px}
   .hero-content{padding:130px 32px 100px}
   .hero-stats{grid-template-columns:repeat(4,1fr);gap:16px}
@@ -474,8 +476,6 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 
 /* ---- iPad Portrait & Large Phone (768px) ---- */
 @media(max-width:768px){
-  .nav-links,.nav-cta{display:none}
-  .hamburger{display:flex}
   .nav-inner{padding:0 20px}
   .hero-content{padding:110px 20px 80px}
   .hero h1{font-size:clamp(30px,6vw,48px)}
