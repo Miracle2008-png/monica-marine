@@ -114,16 +114,44 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .nav-link:hover,.nav-link.active{color:var(--white);background:rgba(255,255,255,0.1)}
 .nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--blue2),var(--blue));color:var(--white);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:6px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:var(--transition);border:none;box-shadow:0 4px 16px rgba(37,99,235,0.4)}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,99,235,0.5)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition);display:block}
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:0;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;width:44px;height:44px;flex-shrink:0;position:relative;z-index:1100;transition:var(--transition)}
+.hamburger:hover{background:rgba(255,255,255,0.13)}
+.hamburger span{width:20px;height:2px;background:var(--white);border-radius:2px;transition:all 0.35s cubic-bezier(0.4,0,0.2,1);display:block;transform-origin:center}
+.hamburger.open{background:rgba(255,255,255,0.12)}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{display:none;position:fixed;top:76px;left:0;right:0;background:rgba(6,14,31,0.98);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.06);box-shadow:var(--shadow2);z-index:999;padding:20px 24px 28px}
-.mobile-menu.open{display:block;animation:slideDown 0.3s ease}
-@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
-.mobile-link{display:block;padding:14px 18px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.8);border-radius:8px;font-family:'Montserrat',sans-serif;transition:var(--transition);cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.04)}
-.mobile-link:hover{background:rgba(255,255,255,0.08);color:var(--white)}
+/* MOBILE BACKDROP */
+.mobile-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);backdrop-filter:blur(4px);z-index:1040;cursor:pointer}
+.mobile-backdrop.open{display:block;animation:fadeInBack 0.3s ease forwards}
+@keyframes fadeInBack{from{opacity:0}to{opacity:1}}
+/* MOBILE PANEL */
+.mobile-menu{display:none;position:fixed;top:0;right:0;bottom:0;width:min(300px,82vw);background:linear-gradient(160deg,#060e1f 0%,#0c1e38 60%,#0d2242 100%);box-shadow:-4px 0 60px rgba(0,0,0,0.7);z-index:1050;flex-direction:column;overflow-y:auto}
+.mobile-menu.open{display:flex;animation:slideInRight 0.35s cubic-bezier(0.25,0.46,0.45,0.94) forwards}
+@keyframes slideInRight{from{transform:translateX(100%)}to{transform:translateX(0)}}
+/* MOBILE HEADER */
+.mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding:22px 20px 18px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.mobile-menu-logo{display:flex;align-items:center;gap:10px}
+.mobile-menu-logo img{width:34px;height:34px;border-radius:6px;object-fit:contain;background:white;padding:2px}
+.mobile-menu-logo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;color:var(--white);line-height:1.2}
+.mobile-menu-logo-sub{font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase}
+.mobile-menu-close{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,0.7);font-size:18px;line-height:1;transition:var(--transition);flex-shrink:0}
+.mobile-menu-close:hover{background:rgba(255,255,255,0.15);color:white}
+/* MOBILE LINKS */
+.mobile-nav-links{display:flex;flex-direction:column;padding:12px 12px;gap:2px;flex:1}
+.mobile-link{display:flex;align-items:center;gap:12px;padding:14px 16px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);border-radius:10px;font-family:'Montserrat',sans-serif;transition:var(--transition);cursor:pointer;letter-spacing:0.02em;position:relative}
+.mobile-link::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:0;background:linear-gradient(180deg,var(--blue3),var(--cyan));border-radius:0 3px 3px 0;transition:height 0.2s ease}
+.mobile-link:hover,.mobile-link.active-link{background:rgba(255,255,255,0.06);color:var(--white)}
+.mobile-link:hover::before,.mobile-link.active-link::before{height:60%}
+.mobile-link-icon{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--transition)}
+.mobile-link:hover .mobile-link-icon{background:rgba(37,99,235,0.25)}
+/* MOBILE FOOTER */
+.mobile-menu-footer{padding:16px 20px 28px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:12px}
+.mobile-cta{display:block;width:100%;padding:15px;background:linear-gradient(135deg,var(--blue2),var(--blue));color:var(--white);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:10px;cursor:pointer;text-align:center;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:var(--transition)}
+.mobile-cta:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(37,99,235,0.5)}
+.mobile-contact-info{font-size:11px;color:rgba(255,255,255,0.28);text-align:center;line-height:1.7}
+.mobile-contact-info a{color:rgba(255,255,255,0.45);text-decoration:none}
 
 /* =======================================
    HOME — HERO
@@ -550,13 +578,42 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 </nav>
 
 <!-- MOBILE MENU -->
+<div class="mobile-backdrop" id="mobileBackdrop" onclick="closeMobile()"></div>
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-link" onclick="showPage('home');closeMobile()">Home</div>
-  <div class="mobile-link" onclick="showPage('about');closeMobile()">About Us</div>
-  <div class="mobile-link" onclick="showPage('services');closeMobile()">Services</div>
-  <div class="mobile-link" onclick="showPage('shop');closeMobile()">Shop</div>
-  <div class="mobile-link" onclick="showPage('gallery');closeMobile()">Gallery</div>
-  <div class="mobile-link" onclick="showPage('contact');closeMobile()">Contact</div>
+  <div class="mobile-menu-header">
+    <div class="mobile-menu-logo">
+      <img src="logo.jpeg" alt="Monica Marine Logo">
+      <div>
+        <div class="mobile-menu-logo-name">Monica Marine</div>
+        <div class="mobile-menu-logo-sub">Nigeria Limited</div>
+      </div>
+    </div>
+    <div class="mobile-menu-close" onclick="closeMobile()">&#x2715;</div>
+  </div>
+  <div class="mobile-nav-links">
+    <div class="mobile-link" id="ml-home" onclick="showPage('home');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>Home
+    </div>
+    <div class="mobile-link" id="ml-about" onclick="showPage('about');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>About Us
+    </div>
+    <div class="mobile-link" id="ml-services" onclick="showPage('services');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Services
+    </div>
+    <div class="mobile-link" id="ml-shop" onclick="showPage('shop');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.8 6H20l-1.7 8.4H7.5L5.8 6zM5.4 4H2v2h2.2l3.6 7.6L6.2 16c-.1.3-.2.6-.2.9C6 18.1 6.9 19 8 19h12v-2H8.4c-.1 0-.2-.1-.2-.2l.1-.4 1-1.9H18c.7 0 1.4-.4 1.7-1l3-5.5c.2-.3.3-.6.3-1 0-1.1-.9-2-2-2H5.4z"/></svg></div>Shop
+    </div>
+    <div class="mobile-link" id="ml-gallery" onclick="showPage('gallery');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg></div>Gallery
+    </div>
+    <div class="mobile-link" id="ml-contact" onclick="showPage('contact');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>Contact
+    </div>
+  </div>
+  <div class="mobile-menu-footer">
+    <button class="mobile-cta" onclick="showPage('contact');closeMobile()">Request a Quote</button>
+    <div class="mobile-contact-info">+234 8033025022<br><a href="mailto:ceebe.monica@gmail.com">ceebe.monica@gmail.com</a></div>
+  </div>
 </div>
 
 <!-- ============================================================
@@ -1554,14 +1611,26 @@ window.addEventListener('scroll', () => {
 /* ---- MOBILE MENU ---- */
 function toggleMobile() {
   const menu = document.getElementById('mobileMenu');
-  const ham = document.getElementById('hamburger');
-  menu.classList.toggle('open');
-  ham.classList.toggle('open');
+  const ham  = document.getElementById('hamburger');
+  const back = document.getElementById('mobileBackdrop');
+  const isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    closeMobile();
+  } else {
+    menu.classList.add('open');
+    ham.classList.add('open');
+    back.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 }
 function closeMobile() {
   document.getElementById('mobileMenu').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
 }
+// Close mobile menu on scroll
+window.addEventListener('scroll', () => { if(document.getElementById('mobileMenu').classList.contains('open')) closeMobile(); }, {passive:true});
 
 /* ---- REVEAL ON SCROLL ---- */
 function initReveal() {
