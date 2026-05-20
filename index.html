@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Monica Marine Nigeria Limited — Nigeria's premier maritime services company. Ship supply, chandling, marine equipment, port agency and consultancy. 17 Liverpool Road, Apapa, Lagos. Est. 2002.">
+<meta name="description" content="Monica Marine Nigeria Limited â€” Nigeria's premier maritime services company. Ship supply, chandling, marine equipment, port agency and consultancy. 17 Liverpool Road, Apapa, Lagos. Est. 2002.">
 <meta name="keywords" content="monica marine nigeria, ship supply lagos, marine chandling, port agency nigeria, marine equipment nigeria, apapa lagos shipping">
 <title>Monica Marine Nigeria Limited | Premier Maritime Services</title>
+<!-- Performance: preconnect to font servers -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Preload critical above-fold image -->
+<link rel="preload" href="logo.jpeg" as="image">
+<!-- Load fonts async (non-render-blocking) -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ============================================
-   MONICA MARINE NIGERIA — PREMIUM REBUILD
+   MONICA MARINE NIGERIA â€” PREMIUM REBUILD
    Design: Dark Ocean Theme, Glassmorphism,
    Animated, Fully Responsive
 ============================================ */
@@ -154,7 +160,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .mobile-contact-info a{color:rgba(255,255,255,0.45);text-decoration:none}
 
 /* =======================================
-   HOME — HERO
+   HOME â€” HERO
 ======================================= */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:var(--navy)}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(6,182,212,0.08) 0%,transparent 50%),linear-gradient(180deg,#060e1f 0%,#0a1628 50%,#060e1f 100%)}
@@ -477,7 +483,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
    RESPONSIVE
 ======================================= */
 
-/* ---- iPad Landscape & Tablet (1024px) — hamburger starts here ---- */
+/* ---- iPad Landscape & Tablet (1024px) â€” hamburger starts here ---- */
 @media(max-width:1024px){
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
@@ -556,7 +562,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 <nav id="navbar">
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')">
-      <img src="logo.jpeg" alt="Monica Marine Logo" class="nav-logo-img">
+      <img src="logo.jpeg" alt="Monica Marine Logo" class="nav-logo-img" fetchpriority="high">
       <div class="nav-logo-text">
         <div class="nav-logo-name">Monica Marine</div>
         <div class="nav-logo-sub">Nigeria Limited</div>
@@ -636,7 +642,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           Our Services
         </button>
-        <button class="btn btn-outline" onclick="showPage('contact')">Request a Quote →</button>
+        <button class="btn btn-outline" onclick="showPage('contact')">Request a Quote â†’</button>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -711,15 +717,15 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         <div class="reveal-right">
           <div class="section-tag">About Monica Marine</div>
           <h2 class="section-title dark">Nigeria's Most Trusted Maritime Partner</h2>
-          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:18px;font-weight:300">Monica Marine Nigeria Limited was incorporated on 14th August 2002, headquartered at 17 Liverpool Road, Apapa, Lagos — the heart of Nigeria's maritime industry.</p>
+          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:18px;font-weight:300">Monica Marine Nigeria Limited was incorporated on 14th August 2002, headquartered at 17 Liverpool Road, Apapa, Lagos â€” the heart of Nigeria's maritime industry.</p>
           <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:28px;font-weight:300">Our commitment to excellence has made us the preferred maritime partner for over 32 international shipping companies from Singapore, Greece, Dubai, UAE, Thailand and the UK.</p>
           <div class="about-checklist">
-            <div class="about-check"><div class="check-icon">✓</div>CAC Registered — Reg. No. CO351RC460202</div>
-            <div class="about-check"><div class="check-icon">✓</div>Founded 14th August 2002 — Over 23 years of excellence</div>
-            <div class="about-check"><div class="check-icon">✓</div>24/7 Operations — 365 days a year, emergency line always active</div>
-            <div class="about-check"><div class="check-icon">✓</div>Serving 32+ global shipping companies across 10+ countries</div>
+            <div class="about-check"><div class="check-icon">âœ“</div>CAC Registered â€” Reg. No. CO351RC460202</div>
+            <div class="about-check"><div class="check-icon">âœ“</div>Founded 14th August 2002 â€” Over 23 years of excellence</div>
+            <div class="about-check"><div class="check-icon">âœ“</div>24/7 Operations â€” 365 days a year, emergency line always active</div>
+            <div class="about-check"><div class="check-icon">âœ“</div>Serving 32+ global shipping companies across 10+ countries</div>
           </div>
-          <button class="btn btn-primary" onclick="showPage('about')">Learn More About Us →</button>
+          <button class="btn btn-primary" onclick="showPage('about')">Learn More About Us â†’</button>
         </div>
       </div>
     </div>
@@ -738,25 +744,25 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
           <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="#2563EB"><path d="M20 6H16V4c0-1.1-.9-2-2-2H10c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0H10V4h4v2z"/></svg></div>
           <div class="service-name">Ship Supply &amp; Chandling</div>
           <div class="service-desc">Complete vessel provisioning including fresh water, provisions, deck &amp; engine stores, safety equipment, and bonded goods for vessels at all Nigerian ports.</div>
-          <div class="service-link">View details <span class="service-arrow">→</span></div>
+          <div class="service-link">View details <span class="service-arrow">â†’</span></div>
         </div>
         <div class="service-card delay-2" onclick="showPage('services')">
           <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="#2563EB"><path d="M12 1a5 5 0 00-5 5v3H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V11a2 2 0 00-2-2h-2V6a5 5 0 00-5-5zm0 2a3 3 0 013 3v3H9V6a3 3 0 013-3zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg></div>
           <div class="service-name">Marine Equipment Sales</div>
           <div class="service-desc">Supply and distribution of high-quality marine equipment, spare parts, navigation instruments, safety gear, and engineering components from leading global manufacturers.</div>
-          <div class="service-link">View details <span class="service-arrow">→</span></div>
+          <div class="service-link">View details <span class="service-arrow">â†’</span></div>
         </div>
         <div class="service-card delay-3" onclick="showPage('services')">
           <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="#2563EB"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
           <div class="service-name">Port Agency Services</div>
           <div class="service-desc">Full port agency support including vessel clearance, customs documentation, crew change coordination, bunker arrangement, and liaison with port authorities.</div>
-          <div class="service-link">View details <span class="service-arrow">→</span></div>
+          <div class="service-link">View details <span class="service-arrow">â†’</span></div>
         </div>
         <div class="service-card delay-4" onclick="showPage('services')">
           <div class="service-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="#2563EB"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div>
           <div class="service-name">Marine Consultancy</div>
           <div class="service-desc">Expert advisory services on Nigerian maritime regulations, NIMASA compliance, vessel documentation, marine insurance, and operational risk assessment.</div>
-          <div class="service-link">View details <span class="service-arrow">→</span></div>
+          <div class="service-link">View details <span class="service-arrow">â†’</span></div>
         </div>
       </div>
     </div>
@@ -844,10 +850,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         <div class="reveal-left">
           <div class="section-tag">Our Story</div>
           <h2 class="section-title dark">Built on the Waters of Nigeria</h2>
-          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:16px;font-weight:300">Monica Marine Nigeria Limited was incorporated on 14th August 2002, with a clear vision to provide world-class maritime services. Our head office is located at 17 Liverpool Road, Apapa, Lagos — the heart of Nigeria's maritime industry.</p>
+          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:16px;font-weight:300">Monica Marine Nigeria Limited was incorporated on 14th August 2002, with a clear vision to provide world-class maritime services. Our head office is located at 17 Liverpool Road, Apapa, Lagos â€” the heart of Nigeria's maritime industry.</p>
           <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:16px;font-weight:300">From our early days as a ship chandling and supply company, we have grown into a full-service maritime organization serving the world's most respected shipping companies from Singapore, Greece, Dubai, UAE, Thailand and the United Kingdom.</p>
-          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:32px;font-weight:300">Today, Monica Marine stands as a symbol of reliability, integrity, and professionalism — trusted by over 32 vessel operators and shipping lines operating across West Africa and beyond.</p>
-          <button class="btn btn-primary" onclick="showPage('contact')">Get In Touch →</button>
+          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:32px;font-weight:300">Today, Monica Marine stands as a symbol of reliability, integrity, and professionalism â€” trusted by over 32 vessel operators and shipping lines operating across West Africa and beyond.</p>
+          <button class="btn btn-primary" onclick="showPage('contact')">Get In Touch â†’</button>
         </div>
         <div class="reveal-right">
           <div class="timeline">
@@ -871,7 +877,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
       </div>
       <div class="values-grid">
         <div class="value-card"><div class="value-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#2563EB"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6" fill="white"/><circle cx="12" cy="12" r="2"/></svg></div><div class="value-title">Integrity</div><div class="value-desc">We operate with complete transparency and honesty in all our dealings, building lasting relationships based on trust.</div></div>
-        <div class="value-card"><div class="value-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#2563EB"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div><div class="value-title">Excellence</div><div class="value-desc">We set and maintain the highest standards in everything we do — from product quality to service delivery.</div></div>
+        <div class="value-card"><div class="value-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#2563EB"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div><div class="value-title">Excellence</div><div class="value-desc">We set and maintain the highest standards in everything we do â€” from product quality to service delivery.</div></div>
         <div class="value-card"><div class="value-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#2563EB"><path d="M17 3H7L3 7v10l4 4h10l4-4V7l-4-4zm-5 14l-4-4h3V9h2v4h3l-4 4z"/></svg></div><div class="value-title">Partnership</div><div class="value-desc">We see every client as a long-term partner. Your success is our success, and we invest in that relationship every day.</div></div>
         <div class="value-card"><div class="value-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#2563EB"><path d="M12 1a5 5 0 00-5 5v3H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V11a2 2 0 00-2-2h-2V6a5 5 0 00-5-5zm0 2a3 3 0 013 3v3H9V6a3 3 0 013-3zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg></div><div class="value-title">Safety</div><div class="value-desc">Safety is non-negotiable. We adhere to all international maritime safety standards and SOLAS requirements.</div></div>
         <div class="value-card"><div class="value-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="#2563EB"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="white" stroke-width="1.5" fill="none"/></svg></div><div class="value-title">Sustainability</div><div class="value-desc">We are committed to environmentally responsible maritime practices that protect Nigeria's waterways and oceans.</div></div>
@@ -899,8 +905,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         <!-- FEATURED: Managing Director -->
         <div class="team-card team-featured">
           <div class="team-photo" style="background:linear-gradient(135deg,#060e1f,#1B3A6B)">
-            <img src="team-christopher.jpg" alt="Mr. Christopher Akonye"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="team-initials" style="display:none">CA</div>
           </div>
           <div class="team-info">
@@ -921,8 +929,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         <!-- Rest of team -->
         <div class="team-card">
           <div class="team-photo" style="background:linear-gradient(135deg,#112240,#1a56db)">
-            <img src="team-frances.jpg" alt="Mrs. Frances Akonye"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="team-initials" style="display:none">FA</div>
           </div>
           <div class="team-info">
@@ -937,8 +947,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         </div>
         <div class="team-card">
           <div class="team-photo" style="background:linear-gradient(135deg,#0d2137,#1b5e9e)">
-            <img src="team-blessing.jpg" alt="Miss Blessing Orba"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="team-initials" style="display:none">BO</div>
           </div>
           <div class="team-info">
@@ -953,8 +965,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         </div>
         <div class="team-card">
           <div class="team-photo" style="background:linear-gradient(135deg,#0c2040,#1c5499)">
-            <img src="team-bukola.jpg" alt="Miss Bukola Bakare"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="team-initials" style="display:none">BB</div>
           </div>
           <div class="team-info">
@@ -994,8 +1008,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         </div>
         <div class="team-card">
           <div class="team-photo" style="background:linear-gradient(135deg,#091b30,#1a4f8a)">
-            <img src="team-ibrahim.jpg" alt="Mr. Ibrahim Ismaila"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="team-initials" style="display:none">II</div>
           </div>
           <div class="team-info">
@@ -1019,37 +1035,37 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         <p class="section-sub dark" style="margin:0 auto 44px">Proudly serving the world's most respected shipping companies across Singapore, Greece, Dubai, UAE, Thailand, and the United Kingdom.</p>
       </div>
       <div class="clients-grid">
-        <div class="client-pill">Pacific International Lines (PIL) — Singapore</div>
-        <div class="client-pill">Executive Ship Management — Singapore/India</div>
-        <div class="client-pill">OSMTHOME — Philippines &amp; Singapore</div>
-        <div class="client-pill">Fleetship Management — HK &amp; Singapore</div>
-        <div class="client-pill">Suntech Ship Management — Singapore</div>
-        <div class="client-pill">Hafnia / BW — Singapore</div>
-        <div class="client-pill">Navig8 Ship Management — Singapore</div>
-        <div class="client-pill">Great Circle Shipping — Bangkok, Thailand</div>
-        <div class="client-pill">MSI Ship Management — Singapore</div>
-        <div class="client-pill">Cosmoship Mgt S.A — Greece</div>
-        <div class="client-pill">Thenamaris Ship Mgt — Greece</div>
-        <div class="client-pill">Ship Procurement Services — Greece</div>
-        <div class="client-pill">Petrochem General Mgt — Greece</div>
-        <div class="client-pill">AIMS Shipping — Greece</div>
-        <div class="client-pill">United Sails — Greece</div>
-        <div class="client-pill">Prime Tankers — Greece</div>
-        <div class="client-pill">Technomar — Greece</div>
-        <div class="client-pill">Product Ship Mgt — Greece</div>
-        <div class="client-pill">Franco Compania — Greece</div>
-        <div class="client-pill">Seamar Management — Greece</div>
-        <div class="client-pill">Procureship — Greece</div>
-        <div class="client-pill">Common Progress — Greece</div>
-        <div class="client-pill">Atlantic Bulk Carriers — Greece</div>
-        <div class="client-pill">Equinox Maritime — Greece</div>
-        <div class="client-pill">Cardiff Marine — Greece</div>
-        <div class="client-pill">Prime Bulk Ship Mgt — Greece</div>
-        <div class="client-pill">Capital Ship Mgt — Greece</div>
-        <div class="client-pill">Fleetship Mgt — Dubai</div>
-        <div class="client-pill">GMS Marketing — Dubai</div>
-        <div class="client-pill">Rhine Marine — UAE</div>
-        <div class="client-pill">Todd Navigation — Belfast, N. Ireland UK</div>
+        <div class="client-pill">Pacific International Lines (PIL) â€” Singapore</div>
+        <div class="client-pill">Executive Ship Management â€” Singapore/India</div>
+        <div class="client-pill">OSMTHOME â€” Philippines &amp; Singapore</div>
+        <div class="client-pill">Fleetship Management â€” HK &amp; Singapore</div>
+        <div class="client-pill">Suntech Ship Management â€” Singapore</div>
+        <div class="client-pill">Hafnia / BW â€” Singapore</div>
+        <div class="client-pill">Navig8 Ship Management â€” Singapore</div>
+        <div class="client-pill">Great Circle Shipping â€” Bangkok, Thailand</div>
+        <div class="client-pill">MSI Ship Management â€” Singapore</div>
+        <div class="client-pill">Cosmoship Mgt S.A â€” Greece</div>
+        <div class="client-pill">Thenamaris Ship Mgt â€” Greece</div>
+        <div class="client-pill">Ship Procurement Services â€” Greece</div>
+        <div class="client-pill">Petrochem General Mgt â€” Greece</div>
+        <div class="client-pill">AIMS Shipping â€” Greece</div>
+        <div class="client-pill">United Sails â€” Greece</div>
+        <div class="client-pill">Prime Tankers â€” Greece</div>
+        <div class="client-pill">Technomar â€” Greece</div>
+        <div class="client-pill">Product Ship Mgt â€” Greece</div>
+        <div class="client-pill">Franco Compania â€” Greece</div>
+        <div class="client-pill">Seamar Management â€” Greece</div>
+        <div class="client-pill">Procureship â€” Greece</div>
+        <div class="client-pill">Common Progress â€” Greece</div>
+        <div class="client-pill">Atlantic Bulk Carriers â€” Greece</div>
+        <div class="client-pill">Equinox Maritime â€” Greece</div>
+        <div class="client-pill">Cardiff Marine â€” Greece</div>
+        <div class="client-pill">Prime Bulk Ship Mgt â€” Greece</div>
+        <div class="client-pill">Capital Ship Mgt â€” Greece</div>
+        <div class="client-pill">Fleetship Mgt â€” Dubai</div>
+        <div class="client-pill">GMS Marketing â€” Dubai</div>
+        <div class="client-pill">Rhine Marine â€” UAE</div>
+        <div class="client-pill">Todd Navigation â€” Belfast, N. Ireland UK</div>
       </div>
     </div>
   </section>
@@ -1059,7 +1075,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text"><h2>Work With Our Expert Team</h2><p>Get in touch and let us design a maritime solution for your specific needs.</p></div>
-        <button class="btn btn-white" onclick="showPage('contact')">Contact Us Today →</button>
+        <button class="btn btn-white" onclick="showPage('contact')">Contact Us Today â†’</button>
       </div>
     </div>
   </div>
@@ -1081,13 +1097,16 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
       <div class="services-full-grid">
         <div class="svc-card">
           <div class="svc-top">
-            <img src="svc-supply.jpg" alt="Ship Supply">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="svc-top-overlay"></div>
           </div>
           <div class="svc-body">
             <span class="badge badge-blue">Core Service</span>
             <div class="svc-name">Ship Supply &amp; Chandling</div>
-            <div class="svc-desc">Complete provisioning for vessels at Nigerian ports. Our experienced chandling team ensures your vessel receives everything it needs — on time, every time.</div>
+            <div class="svc-desc">Complete provisioning for vessels at Nigerian ports. Our experienced chandling team ensures your vessel receives everything it needs â€” on time, every time.</div>
             <div class="svc-includes">
               <div class="svc-include"><div class="svc-dot"></div>Fresh provisions, dry goods &amp; bonded stores</div>
               <div class="svc-include"><div class="svc-dot"></div>Deck &amp; engine room consumables</div>
@@ -1101,7 +1120,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         </div>
         <div class="svc-card">
           <div class="svc-top">
-            <img src="svc-equipment.jpg" alt="Marine Equipment">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="svc-top-overlay"></div>
           </div>
           <div class="svc-body">
@@ -1121,7 +1143,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         </div>
         <div class="svc-card">
           <div class="svc-top">
-            <img src="svc-port.jpg" alt="Port Agency">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="svc-top-overlay"></div>
           </div>
           <div class="svc-body">
@@ -1141,7 +1166,10 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         </div>
         <div class="svc-card">
           <div class="svc-top">
-            <img src="svc-consult.jpg" alt="Marine Consultancy">
+            
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
             <div class="svc-top-overlay"></div>
           </div>
           <div class="svc-body">
@@ -1167,7 +1195,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text"><h2>Need a Custom Maritime Solution?</h2><p>Talk to our experts and we'll design a service package for your operations.</p></div>
-        <button class="btn btn-white" onclick="showPage('contact')">Request a Quote →</button>
+        <button class="btn btn-white" onclick="showPage('contact')">Request a Quote â†’</button>
       </div>
     </div>
   </div>
@@ -1210,8 +1238,8 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <div class="shop-count" id="shopCount">Showing <strong>74</strong> products</div>
             <select class="shop-sort" onchange="sortProducts(this.value)">
               <option value="default">Sort by: Default</option>
-              <option value="name">Name: A–Z</option>
-              <option value="name-desc">Name: Z–A</option>
+              <option value="name">Name: Aâ€“Z</option>
+              <option value="name-desc">Name: Zâ€“A</option>
             </select>
           </div>
           <div class="products-grid" id="productsGrid"></div>
@@ -1242,43 +1270,70 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
       <div class="text-center reveal" style="margin-bottom:0">
         <div class="section-tag" style="justify-content:center">Photo Gallery</div>
         <h2 class="section-title dark">Monica Marine in Action</h2>
-        <p class="section-sub dark" style="margin:0 auto 52px">From ship supply operations to marine equipment — a look at what makes us Nigeria's most trusted maritime partner.</p>
+        <p class="section-sub dark" style="margin:0 auto 52px">From ship supply operations to marine equipment â€” a look at what makes us Nigeria's most trusted maritime partner.</p>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item" onclick="openLightbox('gallery-ops.jpg','Monica Marine — Vessel Operations')">
-          <img src="gallery-ops.jpg" alt="Monica Marine Operations">
+        <div class="gallery-item" onclick="openLightbox('gallery-ops.jpg','Monica Marine â€” Vessel Operations')">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Monica Marine Operations</div></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('gallery-port.jpg','Port Operations — Apapa Lagos')">
-          <img src="gallery-port.jpg" alt="Port Operations">
-          <div class="gallery-item-overlay"><div class="gallery-item-label">Port Operations — Apapa Lagos</div></div>
+        <div class="gallery-item" onclick="openLightbox('gallery-port.jpg','Port Operations â€” Apapa Lagos')">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
+          <div class="gallery-item-overlay"><div class="gallery-item-label">Port Operations â€” Apapa Lagos</div></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('gallery-ship.jpg','Marine Supply &amp; Chandling')">
-          <img src="gallery-ship.jpg" alt="Marine Supply">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Marine Supply &amp; Chandling</div></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('gallery-cargo.jpg','Cargo &amp; Freight Operations')">
-          <img src="gallery-cargo.jpg" alt="Cargo Operations">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Cargo &amp; Freight Operations</div></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('binoculars.jpeg','Marine Navigation — G Marine-Guard 7x50 Binoculars')">
-          <img src="binoculars.jpeg" alt="Marine Binoculars">
+        <div class="gallery-item" onclick="openLightbox('binoculars.jpeg','Marine Navigation â€” G Marine-Guard 7x50 Binoculars')">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Marine Navigation Equipment</div></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('ropes.jpeg','Mooring Ropes — Heavy Duty Marine Grade')">
-          <img src="ropes.jpeg" alt="Mooring Ropes">
+        <div class="gallery-item" onclick="openLightbox('ropes.jpeg','Mooring Ropes â€” Heavy Duty Marine Grade')">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Heavy Duty Mooring Ropes</div></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('first aid kit.jpeg','SOLAS First Aid Kit — Liferaft/Lifeboat')">
-          <img src="first aid kit.jpeg" alt="First Aid Kit">
+        <div class="gallery-item" onclick="openLightbox('first aid kit.jpeg','SOLAS First Aid Kit â€” Liferaft/Lifeboat')">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">SOLAS First Aid Kit</div></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('fire extinguisher.jpeg','Marine Fire Extinguisher')">
-          <img src="fire extinguisher.jpeg" alt="Fire Extinguisher">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Marine Fire Safety Equipment</div></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('safety gloves.jpeg','Safety Gloves — Marine Grade')">
-          <img src="safety gloves.jpeg" alt="Safety Gloves">
+        <div class="gallery-item" onclick="openLightbox('safety gloves.jpeg','Safety Gloves â€” Marine Grade')">
+          
+    $count++
+    $args[0].Groups[1].Value + ' loading="lazy"' + $args[0].Groups[2].Value
+
           <div class="gallery-item-overlay"><div class="gallery-item-label">Marine Safety Gloves</div></div>
         </div>
       </div>
@@ -1289,7 +1344,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text"><h2>See Our Full Product Range</h2><p>Browse our marine equipment shop and send an enquiry for any products.</p></div>
-        <button class="btn btn-white" onclick="showPage('shop')">Browse Shop →</button>
+        <button class="btn btn-white" onclick="showPage('shop')">Browse Shop â†’</button>
       </div>
     </div>
   </div>
@@ -1312,7 +1367,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
         <div class="reveal-left">
           <div class="section-tag">Get In Touch</div>
           <h2 class="section-title dark">We're Here to Help</h2>
-          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:28px;font-weight:300">Our team is available 24 hours a day, 7 days a week. Whether you need a quotation, technical support, or emergency assistance — we're just a call away.</p>
+          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:28px;font-weight:300">Our team is available 24 hours a day, 7 days a week. Whether you need a quotation, technical support, or emergency assistance â€” we're just a call away.</p>
           <div class="contact-info-cards">
             <div class="info-card">
               <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#2563EB"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
@@ -1323,11 +1378,11 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
               <div>
                 <div class="info-label">Phone Numbers</div>
                 <div class="info-val">
-                  <a href="tel:+2348033025022">+234 8033025022</a> — Mr. Christopher Akonye (MD)<br>
-                  <a href="tel:+2348038249984">+234 8038249984</a> — Mrs. Frances Akonye<br>
-                  <a href="tel:+2348064274838">+234 8064274838</a> — Miss Blessing Orba<br>
-                  <a href="tel:+2348086908727">+234 8086908727</a> — Mr. Akonye Miracle<br>
-                  <a href="tel:+2348035151112">+234 8035151112</a> — Mr. Ikechukwu Williams
+                  <a href="tel:+2348033025022">+234 8033025022</a> â€” Mr. Christopher Akonye (MD)<br>
+                  <a href="tel:+2348038249984">+234 8038249984</a> â€” Mrs. Frances Akonye<br>
+                  <a href="tel:+2348064274838">+234 8064274838</a> â€” Miss Blessing Orba<br>
+                  <a href="tel:+2348086908727">+234 8086908727</a> â€” Mr. Akonye Miracle<br>
+                  <a href="tel:+2348035151112">+234 8035151112</a> â€” Mr. Ikechukwu Williams
                 </div>
               </div>
             </div>
@@ -1356,7 +1411,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
               <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#2563EB"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
               <div>
                 <div class="info-label">Operating Hours &amp; Registration</div>
-                <div class="info-val">24/7 — 365 days a year<br>Emergency line always active<br>CAC Reg. No: CO351RC460202</div>
+                <div class="info-val">24/7 â€” 365 days a year<br>Emergency line always active<br>CAC Reg. No: CO351RC460202</div>
               </div>
             </div>
           </div>
@@ -1367,7 +1422,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 
         <div class="contact-form reveal-right">
           <div class="form-title">Send Us a Message</div>
-          <div class="form-sub">Fill in the form and click Send — your email app will open with the message ready to send to our team.</div>
+          <div class="form-sub">Fill in the form and click Send â€” your email app will open with the message ready to send to our team.</div>
           <div class="form-row">
             <div class="form-group"><label class="form-label">First Name *</label><input class="form-input" type="text" id="cFirst" placeholder="John"></div>
             <div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" type="text" id="cLast" placeholder="Smith"></div>
@@ -1378,7 +1433,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
           <div class="form-group">
             <label class="form-label">Service Required</label>
             <select class="form-select" id="cService">
-              <option value="">— Select a service —</option>
+              <option value="">â€” Select a service â€”</option>
               <option>Ship Supply &amp; Chandling</option>
               <option>Marine Equipment Sales</option>
               <option>Port Agency Services</option>
@@ -1409,7 +1464,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
           <img src="logo.jpeg" alt="Monica Marine Logo" class="footer-brand-logo">
           <div class="footer-brand-name">Monica Marine Nigeria Limited</div>
         </div>
-        <div class="footer-brand-tag">Premier Maritime Services — Est. 14 August 2002</div>
+        <div class="footer-brand-tag">Premier Maritime Services â€” Est. 14 August 2002</div>
         <p class="footer-about">Nigeria's trusted partner for ship supply, chandling, marine equipment, port agency, and maritime consultancy. Serving global shipping companies since 2002.</p>
         <div class="footer-socials">
           <div class="social-btn" onclick="window.open('https://www.facebook.com/MonicaMarine','_blank')"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
@@ -1449,7 +1504,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
   </div>
   <div class="container">
     <div class="footer-bottom">
-      <span class="footer-bottom-text">© 2026 Monica Marine Nigeria Limited. All rights reserved. | CAC Reg. No. CO351RC460202</span>
+      <span class="footer-bottom-text">Â© 2026 Monica Marine Nigeria Limited. All rights reserved. | CAC Reg. No. CO351RC460202</span>
       <div class="footer-certs">
         <span class="cert-badge">CAC Registered</span>
         <span class="cert-badge">Est. 2002</span>
@@ -1469,7 +1524,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 <div class="modal-overlay" id="productModal" onclick="closeModal(event)">
   <div class="modal" id="modalContent">
     <div class="modal-img" id="modalImg">
-      <button class="modal-close" onclick="closeProductModal()">✕</button>
+      <button class="modal-close" onclick="closeProductModal()">âœ•</button>
     </div>
     <div class="modal-body">
       <div class="modal-cat" id="modalCat"></div>
@@ -1487,7 +1542,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <img id="lightboxImg" src="" alt="">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-close" onclick="closeLightbox()">âœ•</button>
 </div>
 
 <!-- TOAST -->
@@ -1495,7 +1550,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 
 <script>
 /* =============================================
-   MONICA MARINE NIGERIA — MAIN SCRIPT
+   MONICA MARINE NIGERIA â€” MAIN SCRIPT
    Premium Rebuild 2026
 ============================================= */
 
@@ -1504,7 +1559,7 @@ const PRODUCTS = [
   // SAFETY EQUIPMENT
   {id:1,  name:'HB-495-20 Breath Test Tubes (10 Pack)',         cat:'Safety Equipment', sku:'SE-001', img:'alcohol mouth piece.jpeg'},
   {id:2,  name:'Alcohol Tester Mouthpieces',                    cat:'Safety Equipment', sku:'SE-002', img:'alcohol mouth piece.jpeg'},
-  {id:3,  name:'SOLAS First Aid Kit — Liferaft/Lifeboat',       cat:'Safety Equipment', sku:'SE-003', img:'first aid kit.jpeg'},
+  {id:3,  name:'SOLAS First Aid Kit â€” Liferaft/Lifeboat',       cat:'Safety Equipment', sku:'SE-003', img:'first aid kit.jpeg'},
   {id:4,  name:'Mareflex MF03 Antispray Tape 75mm x 10m',       cat:'Safety Equipment', sku:'SE-004', img:'anti spray tape.jpeg'},
   {id:5,  name:'Marine Safety Signs & Equipment',               cat:'Safety Equipment', sku:'SE-005', img:'safety signs & equipment.jpeg'},
   {id:6,  name:'Daniamant Lifebuoy Light LBU0271',              cat:'Safety Equipment', sku:'SE-006', img:'lifebuoy light.jpeg'},
@@ -1763,7 +1818,7 @@ function openProductModal(id) {
   // rebuild modal image area
   imgEl.innerHTML = '';
   const closeBtn = document.createElement('button');
-  closeBtn.className = 'modal-close'; closeBtn.innerHTML = '✕'; closeBtn.onclick = closeProductModal;
+  closeBtn.className = 'modal-close'; closeBtn.innerHTML = 'âœ•'; closeBtn.onclick = closeProductModal;
   imgEl.appendChild(closeBtn);
   const img = document.createElement('img');
   img.src = p.img; img.alt = p.name;
@@ -1778,8 +1833,8 @@ function openProductModal(id) {
   imgEl.appendChild(img);
   const addBtn = document.getElementById('modalAddBtn');
   const inCart = cart.find(c => c.id === id);
-  addBtn.textContent = inCart ? '✓ Added to Enquiry' : 'Add to Enquiry List';
-  addBtn.onclick = () => { addToCart(id); addBtn.textContent = '✓ Added to Enquiry'; };
+  addBtn.textContent = inCart ? 'âœ“ Added to Enquiry' : 'Add to Enquiry List';
+  addBtn.onclick = () => { addToCart(id); addBtn.textContent = 'âœ“ Added to Enquiry'; };
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1801,7 +1856,7 @@ function addToCart(id) {
 
 function viewCart() {
   if (cart.length === 0) { showToast('Your enquiry list is empty.', ''); return; }
-  const subject = encodeURIComponent(`Product Enquiry — Monica Marine Nigeria`);
+  const subject = encodeURIComponent(`Product Enquiry â€” Monica Marine Nigeria`);
   const body = encodeURIComponent(
     `Hello Monica Marine,\n\nI would like to enquire about the following products:\n\n` +
     cart.map((p, i) => `${i+1}. ${p.name} (SKU: ${p.sku})`).join('\n') +
@@ -1823,7 +1878,7 @@ function submitContact() {
   const phone   = document.getElementById('cPhone').value.trim();
   const service = document.getElementById('cService').value;
   const vessel  = document.getElementById('cVessel').value.trim();
-  const subject = encodeURIComponent(`Maritime Enquiry from ${first} ${last}${company ? ' — ' + company : ''}`);
+  const subject = encodeURIComponent(`Maritime Enquiry from ${first} ${last}${company ? ' â€” ' + company : ''}`);
   const body = encodeURIComponent(
     `Name: ${first} ${last}\n` +
     `Company: ${company || 'N/A'}\n` +
@@ -1862,3 +1917,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
