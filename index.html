@@ -6,6 +6,26 @@
 <meta name="description" content="Monica Marine Nigeria Limited — Nigeria's premier maritime services company. Ship supply, chandling, marine equipment, port agency and consultancy. 17 Liverpool Road, Apapa, Lagos. Est. 2002.">
 <meta name="keywords" content="monica marine nigeria, ship supply lagos, marine chandling, port agency nigeria, marine equipment nigeria, apapa lagos shipping">
 <title>Monica Marine Nigeria Limited | Premier Maritime Services</title>
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<link rel="apple-touch-icon" href="logo.jpeg">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monicamarine.org">
+<meta property="og:title" content="Monica Marine Nigeria Limited | Premier Maritime Services">
+<meta property="og:description" content="Nigeria's premier maritime services company. Ship supply, chandling, marine equipment, port agency and consultancy in Apapa, Lagos. Est. 2002.">
+<meta property="og:image" content="https://monicamarine.org/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Monica Marine Nigeria">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Monica Marine Nigeria Limited | Premier Maritime Services">
+<meta name="twitter:description" content="Nigeria's premier maritime services company. Ship supply, chandling, marine equipment and port agency in Apapa, Lagos.">
+<meta name="twitter:image" content="https://monicamarine.org/og-preview.png">
+<!-- Google Analytics GA4 (replace G-XXXXXXXXXX with your Measurement ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<!-- Font connections -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="logo.jpeg" as="image">
@@ -551,6 +571,80 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
   .contact-form{padding:24px}
   .gallery-grid{grid-template-columns:1fr 1fr}
 }
+
+/* =======================================
+   TESTIMONIALS
+======================================= */
+.testimonials-section{background:var(--navy2);position:relative;overflow:hidden}
+.testimonials-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(37,99,235,0.08),transparent 60%)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.testimonial-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius2);padding:32px;position:relative;transition:var(--transition);backdrop-filter:blur(4px)}
+.testimonial-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(37,99,235,0.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.testimonial-quote{font-size:48px;line-height:1;color:var(--blue2);font-family:'Montserrat',sans-serif;font-weight:900;opacity:0.4;margin-bottom:8px}
+.testimonial-text{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.85;font-weight:300;font-style:italic;margin-bottom:24px}
+.testimonial-author{display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,0.07);padding-top:20px}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:white;flex-shrink:0}
+.testimonial-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--white);margin-bottom:2px}
+.testimonial-role{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:0.06em}
+.testimonial-stars{display:flex;gap:3px;margin-bottom:16px}
+.testimonial-star{color:var(--gold2);font-size:14px}
+
+/* =======================================
+   BACK TO TOP BUTTON
+======================================= */
+.back-to-top{position:fixed;bottom:90px;right:24px;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--blue2),var(--blue));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,99,235,0.5);z-index:400;opacity:0;transform:translateY(20px);transition:opacity 0.3s ease,transform 0.3s ease;pointer-events:none}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:all}
+.back-to-top:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,99,235,0.6)}
+.back-to-top svg{width:18px;height:18px;fill:white}
+
+/* =======================================
+   BLOG PAGE
+======================================= */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.blog-card{background:var(--white);border:1px solid var(--gray3);border-radius:var(--radius2);overflow:hidden;transition:var(--transition);cursor:pointer}
+.blog-card:hover{box-shadow:var(--shadow2);transform:translateY(-5px);border-color:transparent}
+.blog-card-img{height:200px;overflow:hidden;position:relative}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.blog-card:hover .blog-card-img img{transform:scale(1.08)}
+.blog-card-cat{position:absolute;top:14px;left:14px;background:var(--blue2);color:white;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.blog-card-body{padding:24px}
+.blog-card-date{font-size:11px;color:var(--gray2);margin-bottom:10px;letter-spacing:0.04em}
+.blog-card-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.4;margin-bottom:10px}
+.blog-card:hover .blog-card-title{color:var(--blue2)}
+.blog-card-excerpt{font-size:13px;color:var(--gray);line-height:1.75;font-weight:300;margin-bottom:18px}
+.blog-card-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--gray3);padding-top:14px}
+.blog-card-author{font-size:12px;color:var(--gray);font-weight:500}
+.blog-card-read{font-size:12px;color:var(--blue2);font-weight:600;font-family:'Montserrat',sans-serif;display:flex;align-items:center;gap:5px}
+.blog-card-read svg{transition:transform 0.2s}
+.blog-card:hover .blog-card-read svg{transform:translateX(4px)}
+.blog-featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;min-height:340px;gap:0}
+.blog-featured .blog-card-img{height:100%;min-height:280px}
+.blog-featured .blog-card-body{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
+.blog-featured .blog-card-title{font-size:22px;margin-bottom:14px}
+.blog-newsletter{background:linear-gradient(135deg,var(--navy),var(--navy4));border-radius:var(--radius2);padding:48px;text-align:center;margin-top:52px;border:1px solid rgba(255,255,255,0.06)}
+.blog-newsletter h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:24px;color:var(--white);margin-bottom:10px}
+.blog-newsletter p{font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300}
+.newsletter-form{display:flex;gap:12px;max-width:480px;margin:0 auto}
+.newsletter-input{flex:1;padding:13px 18px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;color:white;font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s}
+.newsletter-input::placeholder{color:rgba(255,255,255,0.35)}
+.newsletter-input:focus{border-color:var(--blue2)}
+.newsletter-btn{padding:13px 24px;background:linear-gradient(135deg,var(--blue2),var(--blue));color:white;border:none;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:var(--transition)}
+.newsletter-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.4)}
+
+@media(max-width:1024px){
+  .testimonials-grid{grid-template-columns:1fr 1fr}
+  .blog-grid{grid-template-columns:1fr 1fr}
+  .blog-featured{grid-template-columns:1fr;grid-column:auto}
+  .blog-featured .blog-card-img{min-height:220px;height:220px}
+  .blog-featured .blog-card-body{padding:28px}
+}
+@media(max-width:768px){
+  .testimonials-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .blog-featured{grid-template-columns:1fr}
+  .newsletter-form{flex-direction:column}
+  .back-to-top{bottom:80px;right:16px}
+}
 </style>
 </head>
 <body>
@@ -571,6 +665,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
       <div class="nav-link" id="nl-services" onclick="showPage('services')">Services</div>
       <div class="nav-link" id="nl-shop" onclick="showPage('shop')">Shop</div>
       <div class="nav-link" id="nl-gallery" onclick="showPage('gallery')">Gallery</div>
+      <div class="nav-link" id="nl-blog" onclick="showPage('blog')">Blog</div>
       <div class="nav-link" id="nl-contact" onclick="showPage('contact')">Contact</div>
     </div>
     <button class="nav-cta" onclick="showPage('contact')">Request a Quote</button>
@@ -608,6 +703,9 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
     </div>
     <div class="mobile-link" id="ml-gallery" onclick="showPage('gallery');closeMobile()">
       <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg></div>Gallery
+    </div>
+    <div class="mobile-link" id="ml-blog" onclick="showPage('blog');closeMobile()">
+      <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>Blog
     </div>
     <div class="mobile-link" id="ml-contact" onclick="showPage('contact');closeMobile()">
       <div class="mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>Contact
@@ -794,6 +892,56 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
   </section>
 
   <!-- CTA BANNER -->
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section reveal">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Client Testimonials</div>
+        <h2 class="section-title light">Trusted by Vessel Masters &amp; Operators</h2>
+        <p class="section-sub light">What our clients say about working with Monica Marine Nigeria.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal delay-1">
+          <div class="testimonial-stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Monica Marine consistently delivers quality marine supplies ahead of schedule. Their knowledge of Apapa port operations is unmatched — they've kept our vessels compliant and seaworthy through every call.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CK</div>
+            <div>
+              <div class="testimonial-name">Capt. Charles Kanu</div>
+              <div class="testimonial-role">Master, MV Atlantic Star</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-2">
+          <div class="testimonial-stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">We've worked with chandlers across West Africa and Monica Marine stands out for reliability. Their procurement team sources rare parts fast, and the safety equipment they supply meets international standards.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AO</div>
+            <div>
+              <div class="testimonial-name">Adebola Ogunleye</div>
+              <div class="testimonial-role">Fleet Manager, Starlite Shipping</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-3">
+          <div class="testimonial-stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">From provisions to deck maintenance supplies, Monica Marine handles everything efficiently. Their team's 24-hour responsiveness makes them our first call every time we berth in Lagos.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">EI</div>
+            <div>
+              <div class="testimonial-name">Emeka Ikenna</div>
+              <div class="testimonial-role">Port Agent, TransOcean Logistics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="cta-banner">
     <div class="cta-grid-lines"></div>
     <div class="container">
@@ -1403,6 +1551,120 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
   </section>
 </div><!-- /contact -->
 
+
+<!-- BLOG PAGE -->
+<div class="page" id="page-blog">
+  <div class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb"><span class="bc-link" onclick="showPage('home')">Home</span><span class="bc-sep">/</span>Blog</div>
+      <h1>Maritime Insights</h1>
+      <p>News, guides and insights from Nigeria's premier maritime services company.</p>
+    </div>
+  </div>
+
+  <section class="section section-off">
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Featured Article -->
+        <div class="blog-card blog-featured reveal">
+          <div class="blog-card-img">
+            <img src="gallery-ops.jpg" alt="Ship chandling at Apapa Port" loading="lazy">
+            <div class="blog-card-cat">Featured</div>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">May 15, 2025 &nbsp;·&nbsp; 6 min read</div>
+            <h2 class="blog-card-title">The Complete Guide to Ship Chandling at Apapa Port, Lagos</h2>
+            <p class="blog-card-excerpt">Everything vessel masters and shipping companies need to know about sourcing quality marine supplies and provisions when calling at Nigeria's busiest seaport — from NPA regulations to same-day delivery logistics.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Monica Marine Team</span>
+              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <!-- Article 2 -->
+        <div class="blog-card reveal delay-1">
+          <div class="blog-card-img">
+            <img src="gallery-cargo.jpg" alt="Marine safety equipment" loading="lazy">
+            <div class="blog-card-cat">Safety</div>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">April 28, 2025 &nbsp;·&nbsp; 4 min read</div>
+            <h3 class="blog-card-title">Marine Safety Equipment Requirements for Nigerian Waters</h3>
+            <p class="blog-card-excerpt">NIMASA and international SOLAS regulations demand specific safety equipment aboard all vessels operating in Nigerian territorial waters. Here's what you need and where to source it.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Monica Marine Team</span>
+              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <!-- Article 3 -->
+        <div class="blog-card reveal delay-2">
+          <div class="blog-card-img">
+            <img src="gallery-port.jpg" alt="Apapa port aerial view" loading="lazy">
+            <div class="blog-card-cat">Industry</div>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">March 12, 2025 &nbsp;·&nbsp; 5 min read</div>
+            <h3 class="blog-card-title">How Nigeria's Port Reforms Are Changing Maritime Supply Chains</h3>
+            <p class="blog-card-excerpt">The Nigerian Ports Authority's ongoing modernisation drive at Apapa and Tin Can Island is reshaping how chandlers, port agents and shipping companies operate. What does this mean for your vessel calls?</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Monica Marine Team</span>
+              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <!-- Article 4 -->
+        <div class="blog-card reveal delay-1">
+          <div class="blog-card-img">
+            <img src="gallery-ship.jpg" alt="Ship chandling supply at sea" loading="lazy">
+            <div class="blog-card-cat">Tips</div>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">February 5, 2025 &nbsp;·&nbsp; 3 min read</div>
+            <h3 class="blog-card-title">5 Things to Check Before Your Vessel Leaves Apapa Port</h3>
+            <p class="blog-card-excerpt">A practical pre-departure checklist for vessel masters — from provisions and spare parts to safety certificates and crew welfare supplies — to ensure a smooth departure every time.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Monica Marine Team</span>
+              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <!-- Article 5 -->
+        <div class="blog-card reveal delay-2">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,var(--navy),var(--navy4));display:flex;align-items:center;justify-content:center">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="rgba(37,99,235,0.5)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <div class="blog-card-cat">Guide</div>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">January 20, 2025 &nbsp;·&nbsp; 7 min read</div>
+            <h3 class="blog-card-title">Understanding Marine Lubricants: A Guide for Nigerian Vessel Operators</h3>
+            <p class="blog-card-excerpt">Choosing the right lubricants for your marine engines is critical for performance and longevity. Our technical team breaks down the different grades, applications and sourcing options available in Nigeria.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Monica Marine Team</span>
+              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="blog-newsletter reveal">
+        <h3>Stay Updated with Maritime Insights</h3>
+        <p>Get the latest news, guides and updates from Monica Marine Nigeria delivered to your inbox.</p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email address" id="newsletterEmail">
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M7 14l5-5 5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+</button>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
@@ -1429,6 +1691,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
           <div class="footer-link" onclick="showPage('services')">Our Services</div>
           <div class="footer-link" onclick="showPage('shop')">Shop</div>
           <div class="footer-link" onclick="showPage('gallery')">Gallery</div>
+          <div class="footer-link" onclick="showPage('blog')">Blog</div>
           <div class="footer-link" onclick="showPage('contact')">Contact</div>
         </div>
       </div>
@@ -1862,6 +2125,21 @@ document.addEventListener('keydown', e => {
 document.addEventListener('DOMContentLoaded', () => {
   showPage('home');
 });
+
+/* ---- BACK TO TOP ---- */
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+window.addEventListener('scroll',()=>{
+  const btn=document.getElementById('backToTop');
+  if(btn){btn.classList.toggle('visible',window.scrollY>400);}
+},{passive:true});
+
+/* ---- NEWSLETTER ---- */
+function subscribeNewsletter(){
+  const email=document.getElementById('newsletterEmail');
+  if(!email||!email.value.includes('@')){showToast('Please enter a valid email address','error');return;}
+  showToast('Thank you! You\'ve been subscribed to our maritime insights.','success');
+  email.value='';
+}
 </script>
 </body>
 </html>
