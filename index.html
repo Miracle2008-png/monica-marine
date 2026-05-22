@@ -2069,14 +2069,7 @@ window.addEventListener('popstate', function(e) {
   showPage(page, true);
 });
 
-// Load correct page from hash on startup
-(function() {
-  const hash = window.location.hash.replace('#', '').trim();
-  const validPages = ['home','about','services','shop','gallery','blog','contact'];
-  const startPage = validPages.includes(hash) ? hash : 'home';
-  if (startPage !== 'home') showPage(startPage, true);
-  history.replaceState({ page: startPage }, '', startPage === 'home' ? '#' : '#' + startPage);
-})();
+
 
 /* ---- SCROLL EFFECT ---- */
 window.addEventListener('scroll', () => {
@@ -2368,8 +2361,13 @@ document.addEventListener('keydown', e => {
 });
 
 /* ---- INIT ---- */
-document.addEventListener('DOMContentLoaded', () => {
-  showPage('home');
+document.addEventListener('DOMContentLoaded', function() {
+  // Read hash to load correct page on direct link / refresh
+  const hash = window.location.hash.replace('#', '').trim();
+  const validPages = ['home','about','services','shop','gallery','blog','contact'];
+  const startPage = validPages.includes(hash) ? hash : 'home';
+  showPage(startPage, true);
+  history.replaceState({ page: startPage }, '', startPage === 'home' ? '#' : '#' + startPage);
 });
 
 
