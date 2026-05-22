@@ -2739,8 +2739,7 @@ function sendViaWhatsApp() {
     'Message:',
     d.message || 'Please get in touch.',
   ];
-  const msg = encodeURIComponent(lines.join('
-'));
+  const msg = encodeURIComponent(lines.join('\\n'));
   window.open('https://wa.me/2348033025022?text=' + msg, '_blank');
 }
 
