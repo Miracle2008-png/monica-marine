@@ -6,6 +6,62 @@
 <meta name="description" content="Monica Marine Nigeria Limited — Nigeria's premier maritime services company. Ship supply, chandling, marine equipment, port agency and consultancy. 17 Liverpool Road, Apapa, Lagos. Est. 2002.">
 <meta name="keywords" content="monica marine nigeria, ship supply lagos, marine chandling, port agency nigeria, marine equipment nigeria, apapa lagos shipping">
 <title>Monica Marine Nigeria Limited | Premier Maritime Services</title>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://monicamarine.org/#business",
+      "name": "Monica Marine Nigeria Limited",
+      "alternateName": "Monica Marine",
+      "description": "Nigeria's premier maritime services company offering ship supply, chandling, marine equipment sales, port agency services, and maritime consultancy since 2002.",
+      "url": "https://monicamarine.org",
+      "logo": "https://monicamarine.org/logo.jpeg",
+      "image": "https://monicamarine.org/og-preview.png",
+      "telephone": ["+2348033025022", "+2348064274838"],
+      "email": "info@monicamarine.org",
+      "foundingDate": "2002-08-14",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "17 Liverpool Road, Apapa",
+        "addressLocality": "Lagos",
+        "addressCountry": "NG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 6.4474,
+        "longitude": 3.3603
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.instagram.com/monicamarine.ddt",
+        "https://wa.me/2348033025022"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Maritime Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ship Supply and Chandling"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marine Equipment Sales"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Port Agency Services"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Maritime Consultancy"}}
+        ]
+      },
+      "priceRange": "$",
+      "currenciesAccepted": "NGN, USD",
+      "areaServed": "Nigeria"
+    }
+  ]
+}
+</script>
 <!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="logo.jpeg">
 <link rel="apple-touch-icon" href="logo.jpeg">
@@ -423,11 +479,21 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .gallery-item:hover .gallery-item-overlay{opacity:1}
 .gallery-item-label{font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--white)}
 
-.lightbox{position:fixed;inset:0;background:rgba(6,14,31,0.95);z-index:3000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s ease}
+.lightbox{position:fixed;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.35s ease}
 .lightbox.open{opacity:1;pointer-events:all}
-.lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:var(--shadow3)}
-.lightbox-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.1);color:white;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;transition:var(--transition);border:1px solid rgba(255,255,255,0.15)}
-.lightbox-close:hover{background:rgba(255,255,255,0.2)}
+.lightbox-backdrop{position:absolute;inset:0;background:rgba(4,10,22,0.96);backdrop-filter:blur(8px)}
+.lightbox-content{position:relative;z-index:1;max-width:92vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lightbox-content img{max-width:90vw;max-height:80vh;object-fit:contain;border-radius:10px;box-shadow:0 24px 80px rgba(0,0,0,0.7);transition:transform 0.3s ease}
+.lightbox-caption{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0 4px;gap:16px}
+.lightbox-caption span{font-size:13px;color:rgba(255,255,255,0.65);font-family:'Inter',sans-serif}
+.lightbox-counter{color:rgba(255,255,255,0.35);font-size:12px;white-space:nowrap}
+.lightbox-close{position:absolute;top:20px;right:20px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);color:white;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;transition:all 0.2s;border:1px solid rgba(255,255,255,0.15);z-index:2}
+.lightbox-close:hover{background:rgba(255,255,255,0.22);transform:scale(1.1)}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.15);cursor:pointer;font-size:28px;display:flex;align-items:center;justify-content:center;z-index:2;transition:all 0.2s;line-height:1}
+.lightbox-nav:hover{background:rgba(255,255,255,0.22);transform:translateY(-50%) scale(1.1)}
+.lightbox-prev{left:20px}
+.lightbox-next{right:20px}
+@media(max-width:600px){.lightbox-prev{left:8px}.lightbox-next{right:8px}.lightbox-nav{width:38px;height:38px;font-size:22px}}
 
 /* =======================================
    CONTACT PAGE
@@ -692,6 +758,22 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
   .newsletter-form{flex-direction:column}
   .back-to-top{bottom:80px;right:16px}
 }
+
+/* COOKIE CONSENT */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:rgba(6,14,31,0.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,0.08);z-index:9999;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1)}
+.cookie-banner.show{transform:translateY(0)}
+.cookie-text{flex:1;min-width:220px}
+.cookie-text p{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;margin:0}
+.cookie-text a{color:#60a5fa;text-decoration:none}
+.cookie-text a:hover{text-decoration:underline}
+.cookie-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:white;margin-bottom:4px}
+.cookie-btns{display:flex;gap:10px;flex-shrink:0}
+.cookie-btn{padding:9px 20px;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border:none;transition:all 0.2s}
+.cookie-accept{background:linear-gradient(135deg,#2563eb,#1a56db);color:white;box-shadow:0 3px 12px rgba(37,99,235,0.4)}
+.cookie-accept:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.5)}
+.cookie-decline{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15)}
+.cookie-decline:hover{color:white;border-color:rgba(255,255,255,0.4)}
+@media(max-width:600px){.cookie-banner{flex-direction:column;gap:14px}.cookie-btns{width:100%}.cookie-btn{flex:1;text-align:center}}
 </style>
 </head>
 <body>
@@ -1838,9 +1920,18 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 </div>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightboxImg" src="" alt="">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+  <button class="lightbox-close" onclick="closeLightbox()" title="Close">&#x2715;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)" title="Previous">&#8249;</button>
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)" title="Next">&#8250;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="" style="transition:opacity 0.2s">
+    <div class="lightbox-caption">
+      <span id="lightboxLabel"></span>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+  </div>
 </div>
 
 <!-- TOAST -->
@@ -1943,7 +2034,7 @@ let activeCategory = 'All';
 let searchQuery = '';
 
 /* ---- PAGE NAVIGATION ---- */
-function showPage(name) {
+function showPage(name, skipHistory) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
   const page = document.getElementById('page-' + name);
@@ -1954,7 +2045,38 @@ function showPage(name) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (name === 'shop') renderProducts();
   setTimeout(initReveal, 80);
+  // Update URL hash
+  if (!skipHistory) {
+    const hash = name === 'home' ? '#' : '#' + name;
+    history.pushState({ page: name }, '', hash);
+    // Update page title
+    const titles = {
+      home: 'Monica Marine Nigeria Limited | Premier Maritime Services',
+      about: 'About Us | Monica Marine Nigeria Limited',
+      services: 'Our Services | Monica Marine Nigeria Limited',
+      shop: 'Marine Shop | Monica Marine Nigeria Limited',
+      gallery: 'Gallery | Monica Marine Nigeria Limited',
+      blog: 'Maritime Blog | Monica Marine Nigeria Limited',
+      contact: 'Contact Us | Monica Marine Nigeria Limited'
+    };
+    document.title = titles[name] || titles.home;
+  }
 }
+
+// Handle browser back/forward
+window.addEventListener('popstate', function(e) {
+  const page = (e.state && e.state.page) ? e.state.page : 'home';
+  showPage(page, true);
+});
+
+// Load correct page from hash on startup
+(function() {
+  const hash = window.location.hash.replace('#', '').trim();
+  const validPages = ['home','about','services','shop','gallery','blog','contact'];
+  const startPage = validPages.includes(hash) ? hash : 'home';
+  if (startPage !== 'home') showPage(startPage, true);
+  history.replaceState({ page: startPage }, '', startPage === 'home' ? '#' : '#' + startPage);
+})();
 
 /* ---- SCROLL EFFECT ---- */
 window.addEventListener('scroll', () => {
@@ -2192,12 +2314,47 @@ function submitContact() {
 }
 
 /* ---- GALLERY LIGHTBOX ---- */
+let lbImages = [];
+let lbIndex = 0;
+
+function buildLightboxList() {
+  lbImages = [];
+  document.querySelectorAll('.gallery-item[onclick]').forEach(el => {
+    const attr = el.getAttribute('onclick');
+    const m = attr ? attr.match(/openLightbox\('([^']+)','([^']+)'\)/) : null;
+    if (m) lbImages.push({ src: m[1], label: m[2] });
+  });
+}
+
 function openLightbox(src, label) {
-  document.getElementById('lightboxImg').src = src;
-  document.getElementById('lightboxImg').alt = label || '';
+  if (!lbImages.length) buildLightboxList();
+  lbIndex = lbImages.findIndex(i => i.src === src);
+  if (lbIndex < 0) lbIndex = 0;
+  renderLightbox();
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
+function renderLightbox() {
+  const item = lbImages[lbIndex];
+  if (!item) return;
+  const img = document.getElementById('lightboxImg');
+  img.style.opacity = '0';
+  img.src = item.src;
+  img.alt = item.label;
+  img.onload = function() { img.style.opacity = '1'; };
+  const lbl = document.getElementById('lightboxLabel');
+  const ctr = document.getElementById('lightboxCounter');
+  if (lbl) lbl.textContent = item.label;
+  if (ctr) ctr.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+}
+
+function lightboxNav(dir) {
+  if (!lbImages.length) return;
+  lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+  renderLightbox();
+}
+
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
   document.body.style.overflow = '';
@@ -2206,6 +2363,8 @@ function closeLightbox() {
 /* ---- ESC KEY ---- */
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') { closeProductModal(); closeLightbox(); closeMobile(); }
+  if (e.key === 'ArrowLeft' && document.getElementById('lightbox').classList.contains('open')) lightboxNav(-1);
+  if (e.key === 'ArrowRight' && document.getElementById('lightbox').classList.contains('open')) lightboxNav(1);
 });
 
 /* ---- INIT ---- */
@@ -2270,6 +2429,50 @@ function subscribeNewsletter(){
   showToast('Thank you! You\'ve been subscribed to our maritime insights.','success');
   email.value='';
 }
+
+
+/* ---- COOKIE CONSENT ---- */
+(function() {
+  const consent = localStorage.getItem('mmCookieConsent');
+  if (!consent) {
+    setTimeout(function() {
+      const b = document.getElementById('cookieBanner');
+      if (b) b.classList.add('show');
+    }, 1500);
+  }
+  if (consent === 'declined') {
+    // Disable GA if declined
+    window['ga-disable-G-K09XX00K8D'] = true;
+  }
+})();
+
+function acceptCookies() {
+  localStorage.setItem('mmCookieConsent', 'accepted');
+  closeCookieBanner();
+}
+
+function declineCookies() {
+  localStorage.setItem('mmCookieConsent', 'declined');
+  window['ga-disable-G-K09XX00K8D'] = true;
+  closeCookieBanner();
+}
+
+function closeCookieBanner() {
+  const b = document.getElementById('cookieBanner');
+  if (b) { b.style.transform = 'translateY(100%)'; setTimeout(() => b.remove(), 400); }
+}
 </script>
+
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">
+    <div class="cookie-title">We use cookies</div>
+    <p>We use cookies and analytics to improve your experience on our site. By clicking "Accept", you agree to our use of cookies. <a href="#" onclick="showPage('contact');closeCookieBanner();return false;">Learn more</a>.</p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
 </body>
 </html>
