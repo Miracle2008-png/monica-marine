@@ -811,6 +811,27 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 @media(max-width:768px){.accred-grid{gap:24px}.accred-item{width:calc(50% - 12px)}}
 @media(max-width:480px){.accred-item{width:100%;justify-content:center}.accred-text{text-align:left}}
 
+
+/* ---- LEGAL PAGES ---- */
+.legal-content{max-width:800px;margin:0 auto;padding:60px 20px}
+.legal-content h2{font-size:24px;margin:32px 0 16px 0;color:var(--navy)}
+.legal-content p{color:var(--gray);line-height:1.8;margin-bottom:16px}
+.legal-content ul{margin-left:20px;margin-bottom:24px;color:var(--gray);line-height:1.8}
+.legal-content li{margin-bottom:8px}
+
+
+/* ---- FAQ SECTION ---- */
+.faq-section{padding:80px 0;background:var(--white)}
+.faq-header{text-align:center;margin-bottom:48px}
+.faq-grid{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.faq-item{border:1px solid var(--gray3);border-radius:12px;overflow:hidden;background:#fff;transition:var(--transition)}
+.faq-item.active{border-color:var(--blue2);box-shadow:0 8px 24px rgba(37,99,235,0.08)}
+.faq-question{padding:20px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:var(--navy);user-select:none}
+.faq-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--blue2);transition:transform 0.3s ease}
+.faq-item.active .faq-icon{transform:rotate(180deg)}
+.faq-answer{padding:0 24px;max-height:0;overflow:hidden;transition:all 0.3s ease;color:var(--gray);line-height:1.7;font-size:14px}
+.faq-item.active .faq-answer{padding:0 24px 24px 24px;max-height:300px}
+
 </style>
 </head>
 <body>
@@ -1380,6 +1401,35 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
       </div>
     </div>
   </div>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section section-light">
+    <div class="container">
+      <div class="faq-header reveal">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about our maritime services and operations.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal delay-1" onclick="this.classList.toggle('active')">
+          <div class="faq-question">Do you operate 24/7? <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div></div>
+          <div class="faq-answer">Yes, Monica Marine operates 24 hours a day, 7 days a week, 365 days a year. We understand that maritime operations never sleep, and our emergency response teams are always on standby for urgent ship supplies or port agency needs.</div>
+        </div>
+        <div class="faq-item reveal delay-2" onclick="this.classList.toggle('active')">
+          <div class="faq-question">Which ports do you service in Nigeria? <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div></div>
+          <div class="faq-answer">We cover all major Nigerian seaports, including Apapa Port Complex, Tin Can Island Port, Onne Port, Port Harcourt, Warri, and Calabar ports. We also service offshore vessels within the Nigerian Exclusive Economic Zone (EEZ).</div>
+        </div>
+        <div class="faq-item reveal delay-3" onclick="this.classList.toggle('active')">
+          <div class="faq-question">Are you fully licensed and certified? <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div></div>
+          <div class="faq-answer">Absolutely. We are fully registered with the Corporate Affairs Commission (CAC), licensed by the Nigerian Ports Authority (NPA), certified by NIMASA, and strictly adhere to the Nigerian Oil and Gas Industry Content Development (NOGICD) Act.</div>
+        </div>
+        <div class="faq-item reveal delay-4" onclick="this.classList.toggle('active')">
+          <div class="faq-question">How quickly can you deliver ship provisions? <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div></div>
+          <div class="faq-answer">For standard provisions (fresh food, cabin stores, medical supplies), we can deliver within 12-24 hours of PO confirmation. For emergency technical supplies, we offer expedited delivery straight to your vessel's berth or anchorage.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div><!-- /about -->
 
 <!-- ============================================================
@@ -2124,7 +2174,7 @@ function showPage(name) {
 
 // Renders the page content without changing the URL
 function renderPage(name) {
-  const validPages = ['home','about','services','shop','gallery','blog','contact'];
+  const validPages = ['home','about','services','shop','gallery','blog','contact','privacy','terms'];
   if (!validPages.includes(name)) name = 'home';
   document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
   document.querySelectorAll('.nav-link').forEach(function(l){ l.classList.remove('active'); });
@@ -2151,7 +2201,7 @@ function renderPage(name) {
 // Read current hash and render the correct page
 function handleRoute() {
   const hash = window.location.hash.replace('#', '').trim();
-  const validPages = ['home','about','services','shop','gallery','blog','contact'];
+  const validPages = ['home','about','services','shop','gallery','blog','contact','privacy','terms'];
   renderPage(validPages.includes(hash) ? hash : 'home');
 }
 
