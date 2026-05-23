@@ -62,13 +62,113 @@
   ]
 }
 
-// Article Modal
-function openArticle() {
+
+const blogArticles = {
+  1: {
+    category: "Featured",
+    date: "May 15, 2025 · 6 min read",
+    title: "The Complete Guide to Ship Chandling at Apapa Port, Lagos",
+    body: `
+      <p>Apapa Port is Nigeria's premier seaport, handling the majority of the nation's maritime trade. For vessel masters and shipping companies, ensuring a seamless resupply operation while docked here is paramount. In this guide, we explore the essential aspects of ship chandling at Apapa.</p>
+      
+      <h4>1. Navigating NPA Regulations</h4>
+      <p>The Nigerian Ports Authority (NPA) has stringent guidelines regarding the movement of goods in and out of the port. A licensed chandler, like Monica Marine, handles the complex documentation required to clear provisions through customs without delaying your vessel's departure.</p>
+      
+      <h4>2. Quality of Fresh Provisions</h4>
+      <p>Sourcing fresh food in tropical climates requires highly efficient cold-chain logistics. We recommend placing orders for fresh vegetables, meats, and dairy at least 48 hours prior to arrival. Our refrigerated trucks deliver directly alongside the vessel to guarantee freshness.</p>
+      
+      <h4>3. Technical Supplies & Spare Parts</h4>
+      <p>Finding specific marine spare parts locally can sometimes be a challenge. Working with an established chandler provides access to an extensive local inventory of engine parts, deck stores, and safety equipment, significantly reducing reliance on expensive air freight.</p>
+      
+      <h4>Conclusion</h4>
+      <p>A successful port call at Apapa relies heavily on the reliability of your supply chain partners. With decades of experience, Monica Marine ensures that your vessel is fully stocked and ready for its next voyage, securely and efficiently.</p>
+    `
+  },
+  2: {
+    category: "Safety",
+    date: "April 28, 2025 · 4 min read",
+    title: "Marine Safety Equipment Requirements for Nigerian Waters",
+    body: `
+      <p>Operating in Nigerian territorial waters requires strict adherence to both international SOLAS (Safety of Life at Sea) conventions and local NIMASA regulations. Ensuring your vessel is equipped with certified safety gear is not just about compliance—it's about saving lives.</p>
+      
+      <h4>Essential Safety Inventory</h4>
+      <ul>
+        <li><strong>Life-Saving Appliances (LSA):</strong> Life rafts, life jackets, immersion suits, and lifebuoys must be SOLAS approved and regularly serviced.</li>
+        <li><strong>Fire-Fighting Equipment:</strong> Extinguishers, fire hoses, breathing apparatus, and fixed extinguishing systems must pass annual inspections by approved local bodies.</li>
+        <li><strong>Pyrotechnics:</strong> Distress flares, line-throwing appliances, and smoke signals must be within their expiration dates.</li>
+      </ul>
+      
+      <h4>Local Sourcing & Certification</h4>
+      <p>When replacing safety equipment while in Nigerian ports, it is vital to source from vendors authorized to supply MED (Marine Equipment Directive) certified gear. Monica Marine partners with top global manufacturers to provide fully certified safety equipment directly to your vessel.</p>
+    `
+  },
+  3: {
+    category: "Industry",
+    date: "March 12, 2025 · 5 min read",
+    title: "How Nigeria's Port Reforms Are Changing Maritime Supply Chains",
+    body: `
+      <p>The Nigerian maritime sector is undergoing significant modernization. The Federal Government's initiatives aimed at decongesting the ports and digitizing customs processes are having a profound impact on the maritime supply chain.</p>
+      
+      <h4>Digitization of Customs Processes</h4>
+      <p>The transition to automated customs clearance has drastically reduced the time it takes to process ship spares in transit. What used to take days can now be cleared in a matter of hours, provided the documentation is perfectly aligned.</p>
+      
+      <h4>Infrastructure Upgrades</h4>
+      <p>Ongoing road rehabilitation around Apapa and Tin Can Island ports has improved the turnaround time for delivery trucks. This means chandlers can guarantee more precise delivery windows, reducing waiting times for vessels.</p>
+      
+      <h4>What this means for Shipping Companies</h4>
+      <p>These reforms translate directly to shorter port stays and reduced operating costs. Partnering with a local agent who understands and leverages these new digital systems is crucial to maximizing the efficiency of your port calls in Nigeria.</p>
+    `
+  },
+  4: {
+    category: "Tips",
+    date: "February 5, 2025 · 3 min read",
+    title: "5 Things to Check Before Your Vessel Leaves Apapa Port",
+    body: `
+      <p>A smooth departure from Apapa Port requires meticulous planning. To avoid last-minute delays or fines, vessel masters should ensure the following checklist is completed prior to casting off.</p>
+      
+      <ul>
+        <li><strong>1. Port Clearance Documentation:</strong> Ensure all port dues have been settled and the outward clearance certificate is in hand from Customs, Immigration, and Port Health.</li>
+        <li><strong>2. Provision Inventory:</strong> Verify that all ordered provisions, bonded stores, and fresh water have been loaded and match the delivery notes.</li>
+        <li><strong>3. Bunkering Completion:</strong> If bunkering operations were performed, ensure all sounding logs are signed off and fuel samples are securely stored.</li>
+        <li><strong>4. Crew Welfare:</strong> Confirm all crew members who went ashore have returned on board, and any crew changes have been fully processed with local immigration.</li>
+        <li><strong>5. Waste Disposal Certificates:</strong> Ensure all sludge and garbage have been disposed of via NPA-approved vendors and that the MARPOL receipts are filed in the vessel's log.</li>
+      </ul>
+      <p>Need assistance managing your port stay? Monica Marine's Port Agency division handles all of these details seamlessly.</p>
+    `
+  },
+  5: {
+    category: "Guide",
+    date: "January 20, 2025 · 7 min read",
+    title: "Understanding Marine Lubricants: A Guide for Nigerian Vessel Operators",
+    body: `
+      <p>Marine engines operate under extreme conditions, making the selection of the correct lubricant vital for maintaining efficiency and preventing catastrophic failures. For vessels operating in West Africa, sourcing the right grade of oil is a priority.</p>
+      
+      <h4>Types of Marine Lubricants</h4>
+      <p>The main categories include cylinder oils, trunk piston engine oils (TPEO), and system oils. The choice depends entirely on the engine type and the sulfur content of the fuel being burned.</p>
+      
+      <h4>The Challenge of Counterfeits</h4>
+      <p>One of the biggest risks in the region is counterfeit lubricants. Using substandard oil can cause severe engine damage. It is critical to purchase lubricants exclusively through authorized distributors.</p>
+      
+      <h4>How We Can Help</h4>
+      <p>Monica Marine supplies premium, sealed marine lubricants from major global brands like Shell, Castrol, and Mobil. We deliver bulk drums or IBCs directly to vessels at all major Nigerian ports, guaranteeing 100% product authenticity.</p>
+    `
+  }
+};
+
+function openArticle(id) {
+  const art = blogArticles[id];
+  if(!art) return;
+  document.getElementById('artMeta').innerHTML = '<span>' + art.category + '</span> ' + art.date;
+  document.getElementById('artTitle').innerText = art.title;
+  document.getElementById('artBody').innerHTML = art.body;
   document.getElementById('articleModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 function closeArticle() {
   document.getElementById('articleModal').classList.remove('active');
+  document.body.style.overflow = '';
 }
+
 
 </script>
 <!-- Favicon -->
@@ -842,16 +942,23 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .faq-item.active .faq-answer{padding:0 24px 24px 24px;max-height:300px}
 
 
+
 /* ---- ARTICLE MODAL ---- */
 .article-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(13,33,55,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:var(--transition);backdrop-filter:blur(5px)}
 .article-modal.active{opacity:1;pointer-events:auto}
-.article-modal-content{background:var(--white);width:90%;max-width:500px;border-radius:16px;padding:40px;text-align:center;transform:translateY(20px);transition:all 0.4s cubic-bezier(0.16,1,0.3,1)}
+.article-modal-content{background:var(--white);width:90%;max-width:800px;max-height:90vh;overflow-y:auto;border-radius:16px;padding:40px;text-align:left;transform:translateY(20px);transition:all 0.4s cubic-bezier(0.16,1,0.3,1);position:relative}
 .article-modal.active .article-modal-content{transform:translateY(0)}
-.article-modal-icon{width:60px;height:60px;background:rgba(37,99,235,0.1);color:var(--blue2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px auto}
-.article-modal h3{color:var(--navy);font-size:22px;margin-bottom:12px;font-family:'Montserrat',sans-serif}
-.article-modal p{color:var(--gray);font-size:15px;line-height:1.6;margin-bottom:32px}
-.article-modal-btn{background:var(--blue2);color:#fff;border:none;padding:12px 32px;border-radius:30px;font-weight:600;font-family:'Montserrat',sans-serif;font-size:14px;cursor:pointer;transition:var(--transition)}
-.article-modal-btn:hover{background:var(--blue);transform:translateY(-2px)}
+.article-modal-close{position:absolute;top:20px;right:20px;background:var(--gray3);border:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--navy);transition:var(--transition)}
+.article-modal-close:hover{background:var(--gray);transform:rotate(90deg)}
+.article-modal h3{color:var(--navy);font-size:26px;margin-bottom:16px;font-family:'Montserrat',sans-serif;line-height:1.3}
+.article-modal-meta{font-size:13px;color:var(--gray);margin-bottom:24px;display:flex;gap:12px;align-items:center}
+.article-modal-meta span{background:rgba(37,99,235,0.1);color:var(--blue2);padding:4px 10px;border-radius:20px;font-weight:600}
+.article-modal-body p{color:var(--gray);font-size:15px;line-height:1.8;margin-bottom:20px}
+.article-modal-body h4{color:var(--navy);font-size:18px;margin:24px 0 12px 0;font-family:'Montserrat',sans-serif}
+.article-modal-body ul{margin-left:20px;margin-bottom:20px;color:var(--gray);line-height:1.8}
+.article-modal-body li{margin-bottom:8px;font-size:15px}
+@media(max-width:768px){.article-modal-content{padding:30px 20px}.article-modal h3{font-size:20px}}
+
 
 </style>
 </head>
@@ -1863,7 +1970,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">Everything vessel masters and shipping companies need to know about sourcing quality marine supplies and provisions when calling at Nigeria's busiest seaport — from NPA regulations to same-day delivery logistics.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle(1)" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1879,7 +1986,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">NIMASA and international SOLAS regulations demand specific safety equipment aboard all vessels operating in Nigerian territorial waters. Here's what you need and where to source it.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle(2)" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1895,7 +2002,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">The Nigerian Ports Authority's ongoing modernisation drive at Apapa and Tin Can Island is reshaping how chandlers, port agents and shipping companies operate. What does this mean for your vessel calls?</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle(3)" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1911,7 +2018,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">A practical pre-departure checklist for vessel masters — from provisions and spare parts to safety certificates and crew welfare supplies — to ensure a smooth departure every time.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle(4)" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1927,7 +2034,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">Choosing the right lubricants for your marine engines is critical for performance and longevity. Our technical team breaks down the different grades, applications and sourcing options available in Nigeria.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle(5)" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -2785,17 +2892,17 @@ function sendViaWhatsApp() {
   </div>
 </div>
 
+
 <!-- ARTICLE MODAL -->
 <div class="article-modal" id="articleModal">
   <div class="article-modal-content">
-    <div class="article-modal-icon">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-    </div>
-    <h3>Article Coming Soon</h3>
-    <p>This article is currently being reviewed by our editorial team and will be published shortly. Please check back later!</p>
-    <button class="article-modal-btn" onclick="closeArticle()">Close</button>
+    <button class="article-modal-close" onclick="closeArticle()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+    <div class="article-modal-meta" id="artMeta"></div>
+    <h3 id="artTitle"></h3>
+    <div class="article-modal-body" id="artBody"></div>
   </div>
 </div>
+
 
 </body>
 </html>
