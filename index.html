@@ -63,111 +63,6 @@
 }
 
 
-const blogArticles = {
-  1: {
-    category: "Featured",
-    date: "May 15, 2025 · 6 min read",
-    title: "The Complete Guide to Ship Chandling at Apapa Port, Lagos",
-    body: `
-      <p>Apapa Port is Nigeria's premier seaport, handling the majority of the nation's maritime trade. For vessel masters and shipping companies, ensuring a seamless resupply operation while docked here is paramount. In this guide, we explore the essential aspects of ship chandling at Apapa.</p>
-      
-      <h4>1. Navigating NPA Regulations</h4>
-      <p>The Nigerian Ports Authority (NPA) has stringent guidelines regarding the movement of goods in and out of the port. A licensed chandler, like Monica Marine, handles the complex documentation required to clear provisions through customs without delaying your vessel's departure.</p>
-      
-      <h4>2. Quality of Fresh Provisions</h4>
-      <p>Sourcing fresh food in tropical climates requires highly efficient cold-chain logistics. We recommend placing orders for fresh vegetables, meats, and dairy at least 48 hours prior to arrival. Our refrigerated trucks deliver directly alongside the vessel to guarantee freshness.</p>
-      
-      <h4>3. Technical Supplies & Spare Parts</h4>
-      <p>Finding specific marine spare parts locally can sometimes be a challenge. Working with an established chandler provides access to an extensive local inventory of engine parts, deck stores, and safety equipment, significantly reducing reliance on expensive air freight.</p>
-      
-      <h4>Conclusion</h4>
-      <p>A successful port call at Apapa relies heavily on the reliability of your supply chain partners. With decades of experience, Monica Marine ensures that your vessel is fully stocked and ready for its next voyage, securely and efficiently.</p>
-    `
-  },
-  2: {
-    category: "Safety",
-    date: "April 28, 2025 · 4 min read",
-    title: "Marine Safety Equipment Requirements for Nigerian Waters",
-    body: `
-      <p>Operating in Nigerian territorial waters requires strict adherence to both international SOLAS (Safety of Life at Sea) conventions and local NIMASA regulations. Ensuring your vessel is equipped with certified safety gear is not just about compliance—it's about saving lives.</p>
-      
-      <h4>Essential Safety Inventory</h4>
-      <ul>
-        <li><strong>Life-Saving Appliances (LSA):</strong> Life rafts, life jackets, immersion suits, and lifebuoys must be SOLAS approved and regularly serviced.</li>
-        <li><strong>Fire-Fighting Equipment:</strong> Extinguishers, fire hoses, breathing apparatus, and fixed extinguishing systems must pass annual inspections by approved local bodies.</li>
-        <li><strong>Pyrotechnics:</strong> Distress flares, line-throwing appliances, and smoke signals must be within their expiration dates.</li>
-      </ul>
-      
-      <h4>Local Sourcing & Certification</h4>
-      <p>When replacing safety equipment while in Nigerian ports, it is vital to source from vendors authorized to supply MED (Marine Equipment Directive) certified gear. Monica Marine partners with top global manufacturers to provide fully certified safety equipment directly to your vessel.</p>
-    `
-  },
-  3: {
-    category: "Industry",
-    date: "March 12, 2025 · 5 min read",
-    title: "How Nigeria's Port Reforms Are Changing Maritime Supply Chains",
-    body: `
-      <p>The Nigerian maritime sector is undergoing significant modernization. The Federal Government's initiatives aimed at decongesting the ports and digitizing customs processes are having a profound impact on the maritime supply chain.</p>
-      
-      <h4>Digitization of Customs Processes</h4>
-      <p>The transition to automated customs clearance has drastically reduced the time it takes to process ship spares in transit. What used to take days can now be cleared in a matter of hours, provided the documentation is perfectly aligned.</p>
-      
-      <h4>Infrastructure Upgrades</h4>
-      <p>Ongoing road rehabilitation around Apapa and Tin Can Island ports has improved the turnaround time for delivery trucks. This means chandlers can guarantee more precise delivery windows, reducing waiting times for vessels.</p>
-      
-      <h4>What this means for Shipping Companies</h4>
-      <p>These reforms translate directly to shorter port stays and reduced operating costs. Partnering with a local agent who understands and leverages these new digital systems is crucial to maximizing the efficiency of your port calls in Nigeria.</p>
-    `
-  },
-  4: {
-    category: "Tips",
-    date: "February 5, 2025 · 3 min read",
-    title: "5 Things to Check Before Your Vessel Leaves Apapa Port",
-    body: `
-      <p>A smooth departure from Apapa Port requires meticulous planning. To avoid last-minute delays or fines, vessel masters should ensure the following checklist is completed prior to casting off.</p>
-      
-      <ul>
-        <li><strong>1. Port Clearance Documentation:</strong> Ensure all port dues have been settled and the outward clearance certificate is in hand from Customs, Immigration, and Port Health.</li>
-        <li><strong>2. Provision Inventory:</strong> Verify that all ordered provisions, bonded stores, and fresh water have been loaded and match the delivery notes.</li>
-        <li><strong>3. Bunkering Completion:</strong> If bunkering operations were performed, ensure all sounding logs are signed off and fuel samples are securely stored.</li>
-        <li><strong>4. Crew Welfare:</strong> Confirm all crew members who went ashore have returned on board, and any crew changes have been fully processed with local immigration.</li>
-        <li><strong>5. Waste Disposal Certificates:</strong> Ensure all sludge and garbage have been disposed of via NPA-approved vendors and that the MARPOL receipts are filed in the vessel's log.</li>
-      </ul>
-      <p>Need assistance managing your port stay? Monica Marine's Port Agency division handles all of these details seamlessly.</p>
-    `
-  },
-  5: {
-    category: "Guide",
-    date: "January 20, 2025 · 7 min read",
-    title: "Understanding Marine Lubricants: A Guide for Nigerian Vessel Operators",
-    body: `
-      <p>Marine engines operate under extreme conditions, making the selection of the correct lubricant vital for maintaining efficiency and preventing catastrophic failures. For vessels operating in West Africa, sourcing the right grade of oil is a priority.</p>
-      
-      <h4>Types of Marine Lubricants</h4>
-      <p>The main categories include cylinder oils, trunk piston engine oils (TPEO), and system oils. The choice depends entirely on the engine type and the sulfur content of the fuel being burned.</p>
-      
-      <h4>The Challenge of Counterfeits</h4>
-      <p>One of the biggest risks in the region is counterfeit lubricants. Using substandard oil can cause severe engine damage. It is critical to purchase lubricants exclusively through authorized distributors.</p>
-      
-      <h4>How We Can Help</h4>
-      <p>Monica Marine supplies premium, sealed marine lubricants from major global brands like Shell, Castrol, and Mobil. We deliver bulk drums or IBCs directly to vessels at all major Nigerian ports, guaranteeing 100% product authenticity.</p>
-    `
-  }
-};
-
-function openArticle(id) {
-  const art = blogArticles[id];
-  if(!art) return;
-  document.getElementById('artMeta').innerHTML = '<span>' + art.category + '</span> ' + art.date;
-  document.getElementById('artTitle').innerText = art.title;
-  document.getElementById('artBody').innerHTML = art.body;
-  document.getElementById('articleModal').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function closeArticle() {
-  document.getElementById('articleModal').classList.remove('active');
-  document.body.style.overflow = '';
-}
 
 
 </script>
@@ -2371,6 +2266,112 @@ function showPage(name) {
 }
 
 // Renders the page content without changing the URL
+const blogArticles = {
+  1: {
+    category: "Featured",
+    date: "May 15, 2025 · 6 min read",
+    title: "The Complete Guide to Ship Chandling at Apapa Port, Lagos",
+    body: `
+      <p>Apapa Port is Nigeria's premier seaport, handling the majority of the nation's maritime trade. For vessel masters and shipping companies, ensuring a seamless resupply operation while docked here is paramount. In this guide, we explore the essential aspects of ship chandling at Apapa.</p>
+      
+      <h4>1. Navigating NPA Regulations</h4>
+      <p>The Nigerian Ports Authority (NPA) has stringent guidelines regarding the movement of goods in and out of the port. A licensed chandler, like Monica Marine, handles the complex documentation required to clear provisions through customs without delaying your vessel's departure.</p>
+      
+      <h4>2. Quality of Fresh Provisions</h4>
+      <p>Sourcing fresh food in tropical climates requires highly efficient cold-chain logistics. We recommend placing orders for fresh vegetables, meats, and dairy at least 48 hours prior to arrival. Our refrigerated trucks deliver directly alongside the vessel to guarantee freshness.</p>
+      
+      <h4>3. Technical Supplies & Spare Parts</h4>
+      <p>Finding specific marine spare parts locally can sometimes be a challenge. Working with an established chandler provides access to an extensive local inventory of engine parts, deck stores, and safety equipment, significantly reducing reliance on expensive air freight.</p>
+      
+      <h4>Conclusion</h4>
+      <p>A successful port call at Apapa relies heavily on the reliability of your supply chain partners. With decades of experience, Monica Marine ensures that your vessel is fully stocked and ready for its next voyage, securely and efficiently.</p>
+    `
+  },
+  2: {
+    category: "Safety",
+    date: "April 28, 2025 · 4 min read",
+    title: "Marine Safety Equipment Requirements for Nigerian Waters",
+    body: `
+      <p>Operating in Nigerian territorial waters requires strict adherence to both international SOLAS (Safety of Life at Sea) conventions and local NIMASA regulations. Ensuring your vessel is equipped with certified safety gear is not just about compliance—it's about saving lives.</p>
+      
+      <h4>Essential Safety Inventory</h4>
+      <ul>
+        <li><strong>Life-Saving Appliances (LSA):</strong> Life rafts, life jackets, immersion suits, and lifebuoys must be SOLAS approved and regularly serviced.</li>
+        <li><strong>Fire-Fighting Equipment:</strong> Extinguishers, fire hoses, breathing apparatus, and fixed extinguishing systems must pass annual inspections by approved local bodies.</li>
+        <li><strong>Pyrotechnics:</strong> Distress flares, line-throwing appliances, and smoke signals must be within their expiration dates.</li>
+      </ul>
+      
+      <h4>Local Sourcing & Certification</h4>
+      <p>When replacing safety equipment while in Nigerian ports, it is vital to source from vendors authorized to supply MED (Marine Equipment Directive) certified gear. Monica Marine partners with top global manufacturers to provide fully certified safety equipment directly to your vessel.</p>
+    `
+  },
+  3: {
+    category: "Industry",
+    date: "March 12, 2025 · 5 min read",
+    title: "How Nigeria's Port Reforms Are Changing Maritime Supply Chains",
+    body: `
+      <p>The Nigerian maritime sector is undergoing significant modernization. The Federal Government's initiatives aimed at decongesting the ports and digitizing customs processes are having a profound impact on the maritime supply chain.</p>
+      
+      <h4>Digitization of Customs Processes</h4>
+      <p>The transition to automated customs clearance has drastically reduced the time it takes to process ship spares in transit. What used to take days can now be cleared in a matter of hours, provided the documentation is perfectly aligned.</p>
+      
+      <h4>Infrastructure Upgrades</h4>
+      <p>Ongoing road rehabilitation around Apapa and Tin Can Island ports has improved the turnaround time for delivery trucks. This means chandlers can guarantee more precise delivery windows, reducing waiting times for vessels.</p>
+      
+      <h4>What this means for Shipping Companies</h4>
+      <p>These reforms translate directly to shorter port stays and reduced operating costs. Partnering with a local agent who understands and leverages these new digital systems is crucial to maximizing the efficiency of your port calls in Nigeria.</p>
+    `
+  },
+  4: {
+    category: "Tips",
+    date: "February 5, 2025 · 3 min read",
+    title: "5 Things to Check Before Your Vessel Leaves Apapa Port",
+    body: `
+      <p>A smooth departure from Apapa Port requires meticulous planning. To avoid last-minute delays or fines, vessel masters should ensure the following checklist is completed prior to casting off.</p>
+      
+      <ul>
+        <li><strong>1. Port Clearance Documentation:</strong> Ensure all port dues have been settled and the outward clearance certificate is in hand from Customs, Immigration, and Port Health.</li>
+        <li><strong>2. Provision Inventory:</strong> Verify that all ordered provisions, bonded stores, and fresh water have been loaded and match the delivery notes.</li>
+        <li><strong>3. Bunkering Completion:</strong> If bunkering operations were performed, ensure all sounding logs are signed off and fuel samples are securely stored.</li>
+        <li><strong>4. Crew Welfare:</strong> Confirm all crew members who went ashore have returned on board, and any crew changes have been fully processed with local immigration.</li>
+        <li><strong>5. Waste Disposal Certificates:</strong> Ensure all sludge and garbage have been disposed of via NPA-approved vendors and that the MARPOL receipts are filed in the vessel's log.</li>
+      </ul>
+      <p>Need assistance managing your port stay? Monica Marine's Port Agency division handles all of these details seamlessly.</p>
+    `
+  },
+  5: {
+    category: "Guide",
+    date: "January 20, 2025 · 7 min read",
+    title: "Understanding Marine Lubricants: A Guide for Nigerian Vessel Operators",
+    body: `
+      <p>Marine engines operate under extreme conditions, making the selection of the correct lubricant vital for maintaining efficiency and preventing catastrophic failures. For vessels operating in West Africa, sourcing the right grade of oil is a priority.</p>
+      
+      <h4>Types of Marine Lubricants</h4>
+      <p>The main categories include cylinder oils, trunk piston engine oils (TPEO), and system oils. The choice depends entirely on the engine type and the sulfur content of the fuel being burned.</p>
+      
+      <h4>The Challenge of Counterfeits</h4>
+      <p>One of the biggest risks in the region is counterfeit lubricants. Using substandard oil can cause severe engine damage. It is critical to purchase lubricants exclusively through authorized distributors.</p>
+      
+      <h4>How We Can Help</h4>
+      <p>Monica Marine supplies premium, sealed marine lubricants from major global brands like Shell, Castrol, and Mobil. We deliver bulk drums or IBCs directly to vessels at all major Nigerian ports, guaranteeing 100% product authenticity.</p>
+    `
+  }
+};
+
+function openArticle(id) {
+  const art = blogArticles[id];
+  if(!art) return;
+  document.getElementById('artMeta').innerHTML = '<span>' + art.category + '</span> ' + art.date;
+  document.getElementById('artTitle').innerText = art.title;
+  document.getElementById('artBody').innerHTML = art.body;
+  document.getElementById('articleModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeArticle() {
+  document.getElementById('articleModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
 function renderPage(name) {
   const validPages = ['home','about','services','shop','gallery','blog','contact','privacy','terms'];
   if (!validPages.includes(name)) name = 'home';
