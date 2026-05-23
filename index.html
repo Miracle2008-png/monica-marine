@@ -2725,11 +2725,46 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 
 /* ---- NEWSLETTER ---- */
-function subscribeNewsletter(){
-  const email=document.getElementById('newsletterEmail');
-  if(!email||!email.value.includes('@')){showToast('Please enter a valid email address','error');return;}
-  showToast('Thank you! You\'ve been subscribed to our maritime insights.','success');
-  email.value='';
+async function subscribeNewsletter(){
+  const emailInput = document.getElementById('newsletterEmail');
+  const email = emailInput.value.trim();
+  
+  if(!email || !email.includes('@')){
+    showToast('Please enter a valid email address', 'error');
+    return;
+  }
+  
+  const btn = document.querySelector('.newsletter-btn');
+  const originalText = btn.innerText;
+  btn.innerText = 'Subscribing...';
+  btn.disabled = true;
+  
+  try {
+    const response = await fetch('https://formspree.io/f/mzdwgjad', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        _subject: 'New Newsletter Subscription',
+        email: email,
+        message: 'Please add ' + email + ' to the Monica Marine newsletter subscriber list.'
+      })
+    });
+    
+    if(response.ok) {
+      showToast('Thank you! You\\'ve been subscribed to our maritime insights.', 'success');
+      emailInput.value = '';
+    } else {
+      showToast('Oops! Something went wrong. Please try again.', 'error');
+    }
+  } catch(error) {
+    showToast('Network error. Please check your connection.', 'error');
+  } finally {
+    btn.innerText = originalText;
+    btn.disabled = false;
+  }
 }
 
 
