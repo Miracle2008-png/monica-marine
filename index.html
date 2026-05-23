@@ -61,6 +61,15 @@
     }
   ]
 }
+
+// Article Modal
+function openArticle() {
+  document.getElementById('articleModal').classList.add('active');
+}
+function closeArticle() {
+  document.getElementById('articleModal').classList.remove('active');
+}
+
 </script>
 <!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="logo.jpeg">
@@ -727,7 +736,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .blog-card-excerpt{font-size:13px;color:var(--gray);line-height:1.75;font-weight:300;margin-bottom:18px}
 .blog-card-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--gray3);padding-top:14px}
 .blog-card-author{font-size:12px;color:var(--gray);font-weight:500}
-.blog-card-read{font-size:12px;color:var(--blue2);font-weight:600;font-family:'Montserrat',sans-serif;display:flex;align-items:center;gap:5px}
+.blog-card-read{cursor:pointer;font-size:12px;color:var(--blue2);font-weight:600;font-family:'Montserrat',sans-serif;display:flex;align-items:center;gap:5px}
 .blog-card-read svg{transition:transform 0.2s}
 .blog-card:hover .blog-card-read svg{transform:translateX(4px)}
 .blog-featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;min-height:340px;gap:0}
@@ -831,6 +840,18 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .faq-item.active .faq-icon{transform:rotate(180deg)}
 .faq-answer{padding:0 24px;max-height:0;overflow:hidden;transition:all 0.3s ease;color:var(--gray);line-height:1.7;font-size:14px}
 .faq-item.active .faq-answer{padding:0 24px 24px 24px;max-height:300px}
+
+
+/* ---- ARTICLE MODAL ---- */
+.article-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(13,33,55,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:var(--transition);backdrop-filter:blur(5px)}
+.article-modal.active{opacity:1;pointer-events:auto}
+.article-modal-content{background:var(--white);width:90%;max-width:500px;border-radius:16px;padding:40px;text-align:center;transform:translateY(20px);transition:all 0.4s cubic-bezier(0.16,1,0.3,1)}
+.article-modal.active .article-modal-content{transform:translateY(0)}
+.article-modal-icon{width:60px;height:60px;background:rgba(37,99,235,0.1);color:var(--blue2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px auto}
+.article-modal h3{color:var(--navy);font-size:22px;margin-bottom:12px;font-family:'Montserrat',sans-serif}
+.article-modal p{color:var(--gray);font-size:15px;line-height:1.6;margin-bottom:32px}
+.article-modal-btn{background:var(--blue2);color:#fff;border:none;padding:12px 32px;border-radius:30px;font-weight:600;font-family:'Montserrat',sans-serif;font-size:14px;cursor:pointer;transition:var(--transition)}
+.article-modal-btn:hover{background:var(--blue);transform:translateY(-2px)}
 
 </style>
 </head>
@@ -1842,7 +1863,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">Everything vessel masters and shipping companies need to know about sourcing quality marine supplies and provisions when calling at Nigeria's busiest seaport — from NPA regulations to same-day delivery logistics.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1858,7 +1879,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">NIMASA and international SOLAS regulations demand specific safety equipment aboard all vessels operating in Nigerian territorial waters. Here's what you need and where to source it.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1874,7 +1895,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">The Nigerian Ports Authority's ongoing modernisation drive at Apapa and Tin Can Island is reshaping how chandlers, port agents and shipping companies operate. What does this mean for your vessel calls?</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1890,7 +1911,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">A practical pre-departure checklist for vessel masters — from provisions and spare parts to safety certificates and crew welfare supplies — to ensure a smooth departure every time.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1906,7 +1927,7 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
             <p class="blog-card-excerpt">Choosing the right lubricants for your marine engines is critical for performance and longevity. Our technical team breaks down the different grades, applications and sourcing options available in Nigeria.</p>
             <div class="blog-card-footer">
               <span class="blog-card-author">By Monica Marine Team</span>
-              <span class="blog-card-read">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="blog-card-read" onclick="openArticle()" style="cursor:pointer">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue2)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -2763,5 +2784,18 @@ function sendViaWhatsApp() {
     <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept All</button>
   </div>
 </div>
+
+<!-- ARTICLE MODAL -->
+<div class="article-modal" id="articleModal">
+  <div class="article-modal-content">
+    <div class="article-modal-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    </div>
+    <h3>Article Coming Soon</h3>
+    <p>This article is currently being reviewed by our editorial team and will be published shortly. Please check back later!</p>
+    <button class="article-modal-btn" onclick="closeArticle()">Close</button>
+  </div>
+</div>
+
 </body>
 </html>
