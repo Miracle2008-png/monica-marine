@@ -164,8 +164,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border:none;transition:var(--transition);position:relative;overflow:hidden}
 .btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.1);opacity:0;transition:opacity 0.2s}
 .btn:hover::before{opacity:1}
-.btn-primary{background:linear-gradient(135deg,var(--blue2),var(--blue));color:var(--white);box-shadow:0 4px 20px rgba(37,99,235,0.4)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(37,99,235,0.5)}
+.btn-primary{background:var(--blue);color:var(--white);box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 .btn-white{background:var(--white);color:var(--navy)}
 .btn-white:hover{background:var(--light);transform:translateY(-2px)}
 .btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
@@ -195,8 +195,8 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .nav-links{display:flex;align-items:center;gap:2px}
 .nav-link{padding:8px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);border-radius:6px;transition:var(--transition);cursor:pointer;font-family:'Montserrat',sans-serif;letter-spacing:0.03em}
 .nav-link:hover,.nav-link.active{color:var(--white);background:rgba(255,255,255,0.1)}
-.nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--blue2),var(--blue));color:var(--white);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:6px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:var(--transition);border:none;box-shadow:0 4px 16px rgba(37,99,235,0.4)}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,99,235,0.5)}
+.nav-cta{padding:10px 22px;background:var(--blue);color:var(--white);font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:6px;cursor:pointer;font-family:'Montserrat',sans-serif;transition:var(--transition);border:none;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.nav-cta:hover{background:var(--blue2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 /* HAMBURGER */
 .hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:0;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;width:44px;height:44px;flex-shrink:0;position:relative;z-index:1100;transition:var(--transition)}
 .hamburger:hover{background:rgba(255,255,255,0.13)}
@@ -231,8 +231,8 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .mobile-link:hover .mobile-link-icon{background:rgba(37,99,235,0.25)}
 /* MOBILE FOOTER */
 .mobile-menu-footer{padding:16px 20px 28px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:12px}
-.mobile-cta{display:block;width:100%;padding:15px;background:linear-gradient(135deg,var(--blue2),var(--blue));color:var(--white);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:10px;cursor:pointer;text-align:center;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:var(--transition)}
-.mobile-cta:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(37,99,235,0.5)}
+.mobile-cta{display:block;width:100%;padding:15px;background:var(--blue);color:var(--white);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:10px;cursor:pointer;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:var(--transition)}
+.mobile-cta:hover{background:var(--blue2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 .mobile-contact-info{font-size:11px;color:rgba(255,255,255,0.28);text-align:center;line-height:1.7}
 .mobile-contact-info a{color:rgba(255,255,255,0.45);text-decoration:none}
 
@@ -240,8 +240,8 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
    HOME — HERO
 ======================================= */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:var(--navy)}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(6,182,212,0.08) 0%,transparent 50%),linear-gradient(180deg,#060e1f 0%,#0a1628 50%,#060e1f 100%)}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:64px 64px}
+.hero-bg{position:absolute;inset:0;background:var(--navy)}
+.hero-grid{display:none}
 .particles-canvas{position:absolute;inset:0;z-index:1}
 .hero-wave{position:absolute;bottom:0;left:0;right:0;z-index:2}
 .hero-wave svg{width:100%;height:auto;display:block}
@@ -318,9 +318,9 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 .why-desc{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.75;font-weight:300}
 
 /* ---- CTA BANNER ---- */
-.cta-banner{background:linear-gradient(135deg,var(--navy),var(--navy4),var(--navy5));padding:80px 0;position:relative;overflow:hidden}
-.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(37,99,235,0.2),transparent 70%)}
-.cta-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px}
+.cta-banner{background:var(--navy);padding:80px 0;position:relative;overflow:hidden}
+.cta-banner::before{display:none}
+.cta-grid-lines{display:none}
 .cta-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
 .cta-text h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,38px);color:var(--white);margin-bottom:10px;letter-spacing:-0.02em}
 .cta-text p{font-size:16px;color:rgba(255,255,255,0.55);font-weight:300;max-width:480px}
@@ -336,8 +336,8 @@ nav.scrolled{background:rgba(6,14,31,0.92);backdrop-filter:blur(20px);border-bot
 /* =======================================
    ABOUT PAGE
 ======================================= */
-.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy4) 60%,var(--navy5) 100%);padding:150px 0 80px;position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(37,99,235,0.15),transparent 60%);background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:60px 60px}
+.page-hero{background:var(--navy);padding:150px 0 80px;position:relative;overflow:hidden}
+.page-hero::before{display:none}
 .page-hero-inner{position:relative;z-index:1}
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:22px;letter-spacing:0.04em}
 .breadcrumb .bc-link{color:var(--blue4);cursor:pointer;transition:color 0.2s}
